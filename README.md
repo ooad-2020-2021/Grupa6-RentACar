@@ -1,1 +1,1 @@
-# Grupa6-RentACar
+# Grupa6-RentAndGo
