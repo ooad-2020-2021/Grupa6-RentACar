@@ -2,7 +2,7 @@
 ### Tema projekta: Iznajmljivanje vozila
 ## Članovi tima: 
 - Azra Ahmić
-- Nadina Muratović
+- Nedina Muratović
 - Dženeta Ahmić
 - Emina Bašić
 ## Opis teme
