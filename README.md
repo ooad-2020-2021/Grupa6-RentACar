@@ -6,7 +6,7 @@
 - Dženeta Ahmić
 - Emina Bašić
 ## Opis teme
-Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih vozila, dostupnost vozila i cijene iznajmljivanja. Aplikacija nudi mogućnost pretraživanja vozila po parametrima, pregleda specifikacije željenog vozila te nudi određeni popust klijentima koji iznajmljuju na duži period. Kontakrijate nas kako bismo zajedno pronšli najpovoljniji aranžman za Vas.
+Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih vozila, dostupnost vozila i cijene iznajmljivanja. Aplikacija nudi mogućnost pretraživanja vozila po parametrima, pregleda specifikacije željenog vozila te nudi određeni popust klijentima koji iznajmljuju na duži period. Kontaktirajte nas kako bismo zajedno pronašli najpovoljniji aranžman za Vas.
 ## Funkcionalnosti
 - Mogućnost pregleda svih vozila
 - Mogućnost rezervacije vozila u odabranom terminu
@@ -17,14 +17,14 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Mogućnost pregleda ugovora 
 - Pregled uslova za iznajmljivanje
 - Obračunavanje popusta na iznajmljivanje na duži period 
-- Pregled predjenih kilometara u toku dana
+- Pregled pređenih kilometara u toku dana
 - Vođenje evidencije o servisiranju automobila
 ## Akteri
 - Uposlenik
 - Gost
 - Klijent sa nalogom
 - Banka
-- Menader
+- Menadžer
 ## Procesi
 - Uposlenik
    - Ovaj korisnik nema mogućnost rezervacije. Ima pravo dodavanja i brisanja novih vozila u sistem, ažuriranje specifikacije vozila, mijenjanje cijene iznajmljivanja, verifikacije ugovora, ažuriranja uslova za iznajmljivanje.
