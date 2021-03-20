@@ -32,7 +32,7 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Klijent sa nalogom
    - Klijent sa nalogom ima kreiran korisnički račun. Ima sva prava pristupa kao i gost, te pored tih mogućnosti ima pravo rezervacije vozila.
 - Menadžer
-   - Menadžer nema mogućnost rezervacije. Ima pravo dodavanja i brisanja novih vozila u sistem, ažuriranje specifikacije vozila, mijenjanje cijene iznajmljivanja, verifikacije ugovora, ažuriranja uslova za iznajmljivanje i brisanje korisničkih računa.
+   - Menadžer nema mogućnost rezervacije. Ima pravo dodavanja i brisanja novih vozila u sistem, ažuriranje specifikacije vozila, mijenjanje cijene iznajmljivanja ili dodavanja popusta na rezervacije, verifikacije ugovora, ažuriranja uslova za iznajmljivanje i brisanje korisničkih računa.
   
 
 
