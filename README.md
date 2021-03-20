@@ -23,17 +23,17 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Uposlenik
 - Gost
 - Klijent sa nalogom
-- Banka
 - Menadžer
 ## Procesi
 - Uposlenik
-   - Ovaj korisnik nema mogućnost rezervacije. Ima pravo dodavanja i brisanja novih vozila u sistem, ažuriranje specifikacije vozila, mijenjanje cijene iznajmljivanja, verifikacije ugovora, ažuriranja uslova za iznajmljivanje.
+   - Ovaj korisnik nema mogućnost rezervacije. Ima pravo pregleda svih vozila, klijenata, verifikovanja iznajmljivanja vozila.
 - Gost
    - Gost ima pravo pregleda vzila, vršenja pretrage vozila po parametrima, pregleda cijene iznajmljivanja i dostupnih vozila.
 - Klijent sa nalogom
    - Klijent sa nalogom ima kreiran korisnički račun. Ima sva prava pristupa kao i gost, te pored tih mogućnosti ima pravo rezervacije vozila.
-- Banka
-   - Validacija kartičnog plaćanja.
+- Menadžer
+   - Menadžer nema mogućnost reyervacije. Ima pravo dodavanja i brisanja novih vozila u sistem, ažuriranje specifikacije vozila, mijenjanje cijene iznajmljivanja, verifikacije ugovora, ažuriranja uslova za iznajmljivanje i brisanje korisničkih računa.
+  
 
 
 
