@@ -13,7 +13,7 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Mogućnost rezervacije vozila u odabranom terminu
 - Pretraživanje vozila po parametrima
 - Mogućnost pregleda specifikacije vozila
-- Odabir lokacije vraćanja vozila
+- Mogućnost kartičnog plaćanja
 - Otkazivanje rezervacije 24 sata prije termina
 - Mogućnost pregleda ugovora 
 - Pregled uslova za iznajmljivanje
@@ -21,13 +21,10 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Pregled pređenih kilometara u toku dana
 - Vođenje evidencije o servisiranju automobila
 ## Akteri
-- Uposlenik
 - Gost
 - Klijent sa nalogom
 - Menadžer
 ## Procesi
-- Uposlenik
-   - Ovaj korisnik nema mogućnost rezervacije. Ima pravo pregleda svih vozila, klijenata, verifikovanja iznajmljivanja vozila.
 - Gost
    - Gost ima pravo pregleda vozila, vršenja pretrage vozila po parametrima, pregleda cijene iznajmljivanja i dostupnih vozila.
 - Klijent sa nalogom
