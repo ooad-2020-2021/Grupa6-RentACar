@@ -27,7 +27,7 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Sistem za kartično plaćanje 
 ## Procesi
 - Gost
-   - Gost ima pravo pregleda vozila, vršenja pretrage vozila po parametrima, pregleda cijene iznajmljivanja i dostupnih vozila.
+   - Gost ima pravo pregleda vozila, vršenja pretrage vozila po parametrima, pregleda cijene iznajmljivanja i dostupnih vozila. Gost ima mogućnost da promijeni svoj status pravljenjem korisničkog naloga.
 - Klijent sa nalogom
    - Klijent sa nalogom ima kreiran korisnički račun. Ima sva prava pristupa kao i gost, te pored tih mogućnosti ima pravo rezervacije vozila.
 - Menadžer
