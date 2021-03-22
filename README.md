@@ -24,6 +24,7 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
 - Gost
 - Klijent sa nalogom
 - Menadžer
+- Sistem za kartično plaćanje 
 ## Procesi
 - Gost
    - Gost ima pravo pregleda vozila, vršenja pretrage vozila po parametrima, pregleda cijene iznajmljivanja i dostupnih vozila.
@@ -31,6 +32,8 @@ Aplikacija omogućava iznajmljivanje vozila klijentima. Omogućen je prikaz svih
    - Klijent sa nalogom ima kreiran korisnički račun. Ima sva prava pristupa kao i gost, te pored tih mogućnosti ima pravo rezervacije vozila.
 - Menadžer
    - Menadžer nema mogućnost rezervacije. Ima pravo dodavanja i brisanja novih vozila u sistem, ažuriranje specifikacije vozila, mijenjanje cijene iznajmljivanja ili dodavanja popusta na rezervacije, verifikacije ugovora, ažuriranja uslova za iznajmljivanje i brisanje korisničkih računa.
+- Sistem za katrično plaćanje 
+   - Sistem za katično plaćanja obezbjeđuje online naplatu usluga. Sve transakcije su u ovlastima tog sistema. Na osnovu unosenih podataka od strane korisnika vrši provjeru validnosti i postojanosti bankovnog računa. U slučaju otkazivanja sistem poništava transakcije koje se tiču takvog korisnika.
   
 
 
