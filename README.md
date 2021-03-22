@@ -1,6 +1,6 @@
 # RentAndGo
 ### Tema projekta: Iznajmljivanje vozila
-![Logo](https://user-images.githubusercontent.com/73303082/111942020-b9ce4380-8ad2-11eb-8430-d61f2a1352ac.png)
+![Logo](https://user-images.githubusercontent.com/73303082/111942733-31e93900-8ad4-11eb-9b61-7da99b168842.png)
 ## Članovi tima: 
 - Azra Ahmić
 - Nedina Muratović
