@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "xtVVO3cMxtXdQXj2HaBacdayjChGI3VrckCUn9sxQBaunDBeOHb9G5IpnrgTn0YsSA36xMe2dLtEuvQuEyiJNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
+=======
+  "dgSpecHash": "c4DlDMvn0i8RJrqcHywr9KkVSdpMrZZ6b5pLvlI6A/Ap9kwavjYbjzH1r9xI7uqwK686+sMd4JNI1A/FPEH3mg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DT User\\Source\\Repos\\ooad-2020-2021\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
+>>>>>>> a061b5092dbdf6cb8862b8c3e043b8aa8f576dba
   "expectedPackageFiles": [],
   "logs": []
 }
