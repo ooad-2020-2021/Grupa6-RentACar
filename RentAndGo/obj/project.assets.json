@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emina Basic\\source\\repos\\RentAndGo\\RentAndGo.csproj",
+      "projectUniqueName": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
       "projectName": "RentAndGo",
-      "projectPath": "C:\\Users\\Emina Basic\\source\\repos\\RentAndGo\\RentAndGo.csproj",
+      "projectPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
       "packagesPath": "C:\\Users\\Emina Basic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emina Basic\\source\\repos\\RentAndGo\\obj\\",
+      "outputPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emina Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
