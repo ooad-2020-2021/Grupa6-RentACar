@@ -24,14 +24,17 @@ namespace RentAndGo.Models
         [Required]
         public string Lokacija { get; set; }
         [Required]
+        [EnumDataType(typeof(Stanje))]
         public Stanje Stanje { get; set; }
         public string Komentar { get; set; }
         public int Popust { get; set; }
         [Required]
         public string NacinPlacanja { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DatumPreuzmanja { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DatumVracanja { get; set; }
     }
 }

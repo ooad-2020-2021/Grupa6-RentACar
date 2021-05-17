@@ -14,16 +14,20 @@ namespace RentAndGo.Models
         [Required]
         public string Naziv { get; set; }
         [Required]
+        [EnumDataType(typeof(Gorivo))]
         public Gorivo Gorivo { get; set; }
         [Required]
+        [EnumDataType(typeof(Gorivo))]
         public Klasa Klasa { get; set; }
         [Required]
+        [EnumDataType(typeof(Mjenjac))]
         public Mjenjac Mjenjac { get; set; }
         [Required]
         public int MaksimalanBrojPutnika { get; set; }
         [Required]
         public int CijenaPoDanu { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DatumTehnickogPregleda { get; set; }
         [Required]
         public string BrojRegistacijskihTablica { get; set; }

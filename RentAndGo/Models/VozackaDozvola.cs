@@ -18,6 +18,7 @@ namespace RentAndGo.Models
         [Required]
         public string NadlezniOrgan { get; set; }
         [Required]
+        [EnumDataType(typeof(Kategorija))]
         public Kategorija Kategorija { get; set; }
 
         public VozackaDozvola(){}

@@ -16,6 +16,7 @@ namespace RentAndGo.Models
         [Required]
         public string Prezime { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DatumRodjenja{ get; set; }
         [Required]
         public string Lozinka { get; set; }
