@@ -12,6 +12,7 @@ namespace RentAndGo.Models
         [Required]
         public string BrojRacuna { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DatumValidnostiKartice { get; set; }
         [Required]
         public string ImePrezime { get; set; }
