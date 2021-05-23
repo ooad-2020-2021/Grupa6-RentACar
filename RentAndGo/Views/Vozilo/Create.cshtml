@@ -8,16 +8,20 @@
     .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
         background-color: #8064A2 !important;
         border-color: #8064A2 !important;
-        width: 100%
+        width: 80%;
+        
     }
     #prikaz-slika-vozila {
         width: 100%;
         height: auto;
     }
-</style>
-<h1>Create</h1>
+    #sika-pored-dugmeta {
+        width: 30px;
+        height: 30px;
+    }
 
-<h4>Vozilo</h4>
+</style>
+<h4 style="color:#8064A2">Unos novog vozila</h4>
 <hr />
 
 <form asp-action="Create">
@@ -26,35 +30,58 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label asp-for="Naziv" class="control-label">1. Naziv</label>
+                    <label asp-for="Naziv" class="control-label">Naziv</label>
                     <input asp-for="Naziv" class="form-control" />
                     <span asp-validation-for="Naziv" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="SlikaVozila" class="control-label">Slika vozila</label>
-                    <input asp-for="SlikaVozila" class="form-control" />
-                    <span asp-validation-for="SlikaVozila" class="text-danger"></span>
-                    <button type="button" class="btn btn-link" onclick="prikaziSliku()">Link</button>
-                    <div class="text-center">
-                        <img id="prikaz-slika-vozila" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" class="rounded" alt="slika vozila">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Klasa" class="control-label">klasa</label>
+                    <label asp-for="Klasa" class="control-label">Klasa</label>
                     <select asp-for="Klasa" class="form-control" asp-items="Html.GetEnumSelectList<Klasa>()">
                         <option selected="selected" value="">Please select</option>
                     </select>
                     <span asp-validation-for="Klasa" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Gorivo" class="control-label">3. Gorivo</label>
+                    <label asp-for="Gorivo" class="control-label">Gorivo</label>
                     <select asp-for="Gorivo" class="form-control" asp-items="Html.GetEnumSelectList<Gorivo>()">
                         <option selected="selected" value="">Please select</option>
                     </select>
                     <span asp-validation-for="Gorivo" class="text-danger"></span>
                 </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="SlikaVozila" class="control-label">Slika vozila</label>
+                    <input asp-for="SlikaVozila" class="form-control" />
+                    <span asp-validation-for="SlikaVozila" class="text-danger"></span>
+                    <button type="button" class="btn btn-link" onclick="prikaziSliku()">Pregled</button>
+                    <div class="text-center">
+                        <img id="prikaz-slika-vozila" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" class="rounded" alt="slika vozila">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="Mjenjac" class="control-label">Mjenjač</label>
+                    <select asp-for="Mjenjac" class="form-control" asp-items="Html.GetEnumSelectList<Mjenjac>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Mjenjac" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaksimalanBrojPutnika" class="control-label">Maksimalan broj putnika</label>
+                    <input asp-for="MaksimalanBrojPutnika" class="form-control" />
+                    <span asp-validation-for="MaksimalanBrojPutnika" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CijenaPoDanu" class="control-label">Cijena po danu</label>
+                    <input asp-for="CijenaPoDanu" class="form-control" />
+                    <span asp-validation-for="CijenaPoDanu" class="text-danger"></span>
+                </div>
+                <hr />
                 <div>
-                    <label>10. Dodatno</label>
+                    <label>Dodatno</label>
                 </div>
                 <div class="form-group form-check">
                     <label class="form-check-label">
@@ -86,48 +113,37 @@
                         <input class="form-check-input" asp-for="MP3Interfejs" /> @Html.DisplayNameFor(model => model.MP3Interfejs)
                     </label>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Dodaj" class="btn btn-primary" />
-                </div>
+
+
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label asp-for="Mjenjac" class="control-label">Mjenjac</label>
-                    <select asp-for="Mjenjac" class="form-control" asp-items="Html.GetEnumSelectList<Mjenjac>()">
-                        <option selected="selected" value="">Please select</option>
-                    </select>
-                    <span asp-validation-for="Mjenjac" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="MaksimalanBrojPutnika" class="control-label">5. Maksimalan broj putnika</label>
-                    <input asp-for="MaksimalanBrojPutnika" class="form-control" />
-                    <span asp-validation-for="MaksimalanBrojPutnika" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CijenaPoDanu" class="control-label">6. Cijena po danu</label>
-                    <input asp-for="CijenaPoDanu" class="form-control" />
-                    <span asp-validation-for="CijenaPoDanu" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label asp-for="DatumTehnickogPregleda" class="control-label">7. Datum tehničkog pregleda</label>
+                    <label asp-for="DatumTehnickogPregleda" class="control-label">Datum tehničkog pregleda</label>
                     <input asp-for="DatumTehnickogPregleda" class="form-control" />
                     <span asp-validation-for="DatumTehnickogPregleda" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="BrojRegistacijskihTablica" class="control-label">8. Broj registarskih tablica</label>
+                    <label asp-for="BrojRegistacijskihTablica" class="control-label">Broj registarskih tablica</label>
                     <input asp-for="BrojRegistacijskihTablica" class="form-control" />
                     <span asp-validation-for="BrojRegistacijskihTablica" class="text-danger"></span>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-9">
+            </div>
+            <div class="col-3">
+                <img id="sika-pored-dugmeta" src="https://scontent.fsjj1-1.fna.fbcdn.net/v/t1.15752-9/cp0/190452521_777644912941331_5672218332985095873_n.png?_nc_cat=110&ccb=1-3&_nc_sid=ae9488&_nc_ohc=0coaDgIvYDMAX-qPv56&_nc_ht=scontent.fsjj1-1.fna&tp=30&oh=fdb61a0a213a3a31968683ea212c85c6&oe=60D1AC66" class="rounded" alt="slika vozila">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+            @*<div>
+                <a asp-action="Index">Back to List</a>
+            </div>*@
+        </div>
     </div>
 </form>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 <script>
     function prikaziSliku() {

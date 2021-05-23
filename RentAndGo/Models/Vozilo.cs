@@ -36,16 +36,22 @@ namespace RentAndGo.Models
         [Required]
         public string BrojRegistacijskihTablica { get; set; }
         [Required]
+        [Display(Name = "Klima")]
         public bool Klima { get; set; }
         [Required]
+        [Display(Name = "Sistem bez ključa")]
         public bool SistemBezKljuca { get; set; }
         [Required]
+        [Display(Name = "Aluminijske felge")]
         public bool AluminijskeFelge { get; set; }
         [Required]
+        [Display(Name = "Sklopivi retrovizori")]
         public bool SklopiviRetrovizori { get; set; }
         [Required]
+        [Display(Name = "Board Computer")]
         public bool BoardComputer { get; set; }
         [Required]
+        [Display(Name = "MP3 Interfejs")]
         public bool MP3Interfejs { get; set; }
 
         public Vozilo(int id, string naziv)
