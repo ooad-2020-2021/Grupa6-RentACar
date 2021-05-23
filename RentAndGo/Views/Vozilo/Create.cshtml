@@ -10,6 +10,10 @@
         border-color: #8064A2 !important;
         width: 100%
     }
+    #prikaz-slika-vozila {
+        width: 100%;
+        height: auto;
+    }
 </style>
 <h1>Create</h1>
 
@@ -27,6 +31,15 @@
                     <span asp-validation-for="Naziv" class="text-danger"></span>
                 </div>
                 <div class="form-group">
+                    <label asp-for="SlikaVozila" class="control-label">Slika vozila</label>
+                    <input asp-for="SlikaVozila" class="form-control" />
+                    <span asp-validation-for="SlikaVozila" class="text-danger"></span>
+                    <button type="button" class="btn btn-link" onclick="prikaziSliku()">Link</button>
+                    <div class="text-center">
+                        <img id="prikaz-slika-vozila" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" class="rounded" alt="slika vozila">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label asp-for="Klasa" class="control-label">klasa</label>
                     <select asp-for="Klasa" class="form-control" asp-items="Html.GetEnumSelectList<Klasa>()">
                         <option selected="selected" value="">Please select</option>
@@ -35,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Gorivo" class="control-label">3. Gorivo</label>
-                    <select asp-for="Gorivo"  class="form-control" asp-items="Html.GetEnumSelectList<Gorivo>()">
+                    <select asp-for="Gorivo" class="form-control" asp-items="Html.GetEnumSelectList<Gorivo>()">
                         <option selected="selected" value="">Please select</option>
                     </select>
                     <span asp-validation-for="Gorivo" class="text-danger"></span>
@@ -109,12 +122,18 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 </form>
 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+<script>
+    function prikaziSliku() {
+        document.getElementById("prikaz-slika-vozila").src = document.getElementById("SlikaVozila").value;
+    }
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

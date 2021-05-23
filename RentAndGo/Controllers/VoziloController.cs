@@ -54,7 +54,7 @@ namespace RentAndGo.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naziv,Gorivo,Klasa,Mjenjac,MaksimalanBrojPutnika,CijenaPoDanu,DatumTehnickogPregleda,BrojRegistacijskihTablica,Klima,SistemBezKljuca,AluminijskeFelge,SklopiviRetrovizori,BoardComputer,MP3Interfejs")] Vozilo vozilo)
+        public async Task<IActionResult> Create([Bind("Id,Naziv,Gorivo,Klasa,Mjenjac,MaksimalanBrojPutnika,CijenaPoDanu,DatumTehnickogPregleda,BrojRegistacijskihTablica,Klima,SistemBezKljuca,AluminijskeFelge,SklopiviRetrovizori,BoardComputer,MP3Interfejs,SlikaVozila")] Vozilo vozilo)
         {
             if (ModelState.IsValid)
             {

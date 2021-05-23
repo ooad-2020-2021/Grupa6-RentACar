@@ -13,6 +13,10 @@ namespace RentAndGo.Models
         public int Id { get; set; }
         [Required]
         public string Naziv { get; set; }
+
+        [Required]
+        public string SlikaVozila { get; set; }
+
         [Required]
         [EnumDataType(typeof(Gorivo))]
         public Gorivo Gorivo { get; set; }
