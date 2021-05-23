@@ -17,7 +17,7 @@ namespace RentAndGo.Models
         [EnumDataType(typeof(Gorivo))]
         public Gorivo Gorivo { get; set; }
         [Required]
-        [EnumDataType(typeof(Gorivo))]
+        [EnumDataType(typeof(Klasa))]
         public Klasa Klasa { get; set; }
         [Required]
         [EnumDataType(typeof(Mjenjac))]
@@ -43,6 +43,7 @@ namespace RentAndGo.Models
         public bool BoardComputer { get; set; }
         [Required]
         public bool MP3Interfejs { get; set; }
+
         public Vozilo(int id, string naziv)
         {
             id = GenerišiID();

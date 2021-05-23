@@ -1,0 +1,121 @@
+﻿@model RentAndGo.Models.Vozilo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+        background-color: #8064A2 !important;
+        border-color: #8064A2 !important;
+        width: 100%
+    }
+</style>
+<h1>Create</h1>
+
+<h4>Vozilo</h4>
+<hr />
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="Naziv" class="control-label">1. Naziv</label>
+                    <input asp-for="Naziv" class="form-control" />
+                    <span asp-validation-for="Naziv" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                    <label asp-for="Klasa" class="control-label">Klasa</label>
+                    <select asp-for="Klasa" class="form-control" asp-items="Html.GetEnumSelectList<Klasa>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Klasa" class="text-danger"></span>
+                </div>*@
+                <div class="form-group">
+                    <label asp-for="Gorivo" class="control-label">3. Gorivo</label>
+                    <select asp-for="Gorivo"  class="form-control" asp-items="Html.GetEnumSelectList<Gorivo>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Gorivo" class="text-danger"></span>
+                </div>
+                <div>
+                    <label>10. Dodatno</label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Klima" /> @Html.DisplayNameFor(model => model.Klima)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="SistemBezKljuca" /> @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="AluminijskeFelge" /> @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="SklopiviRetrovizori" /> @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="BoardComputer" /> @Html.DisplayNameFor(model => model.BoardComputer)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="MP3Interfejs" /> @Html.DisplayNameFor(model => model.MP3Interfejs)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Dodaj" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="Mjenjac" class="control-label">Mjenjac</label>
+                    <select asp-for="Mjenjac" class="form-control" asp-items="Html.GetEnumSelectList<Mjenjac>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Mjenjac" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaksimalanBrojPutnika" class="control-label">5. Maksimalan broj putnika</label>
+                    <input asp-for="MaksimalanBrojPutnika" class="form-control" />
+                    <span asp-validation-for="MaksimalanBrojPutnika" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CijenaPoDanu" class="control-label">6. Cijena po danu</label>
+                    <input asp-for="CijenaPoDanu" class="form-control" />
+                    <span asp-validation-for="CijenaPoDanu" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="DatumTehnickogPregleda" class="control-label">7. Datum tehničkog pregleda</label>
+                    <input asp-for="DatumTehnickogPregleda" class="form-control" />
+                    <span asp-validation-for="DatumTehnickogPregleda" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BrojRegistacijskihTablica" class="control-label">8. Broj registarskih tablica</label>
+                    <input asp-for="BrojRegistacijskihTablica" class="form-control" />
+                    <span asp-validation-for="BrojRegistacijskihTablica" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

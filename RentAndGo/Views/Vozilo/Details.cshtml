@@ -1,0 +1,102 @@
+﻿@model RentAndGo.Models.Vozilo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Vozilo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gorivo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gorivo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Klasa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Klasa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mjenjac)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mjenjac)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaksimalanBrojPutnika)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaksimalanBrojPutnika)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CijenaPoDanu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CijenaPoDanu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumTehnickogPregleda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DatumTehnickogPregleda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojRegistacijskihTablica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojRegistacijskihTablica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Klima)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Klima)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SistemBezKljuca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SistemBezKljuca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AluminijskeFelge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AluminijskeFelge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SklopiviRetrovizori)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BoardComputer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BoardComputer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MP3Interfejs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MP3Interfejs)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
