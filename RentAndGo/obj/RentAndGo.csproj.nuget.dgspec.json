@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj": {}
+    "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj": {
+    "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
+        "projectUniqueName": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
         "projectName": "RentAndGo",
-        "projectPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
+        "projectPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
         "packagesPath": "C:\\Users\\Emina Basic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\obj\\",
+        "outputPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\RentAndGo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Emina Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",

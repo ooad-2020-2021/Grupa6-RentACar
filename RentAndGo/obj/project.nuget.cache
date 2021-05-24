@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rpDVCvu8gqAlgR5i3p9yJj3mvWX7+uTjR3ZXYB8bdLkyVwVy9fx9QJOOzOpH5w/JfOfnPUoCM6CHIgHOtomoHQ==",
+  "dgSpecHash": "hJC0763rrZdNETp5LvvKUsG8mKjbsTH+yIb3xYX4et+lVW32NnX25DzJ6ybTj7rxnCIjWraX+NpGl2jCJByrHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
+  "projectFilePath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\RentAndGo\\RentAndGo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emina Basic\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Emina Basic\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",
