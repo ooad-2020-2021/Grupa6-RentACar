@@ -1,0 +1,113 @@
+﻿@model IEnumerable<RentAndGo.Models.Vozilo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gorivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klasa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mjenjac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaksimalanBrojPutnika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CijenaPoDanu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumTehnickogPregleda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojRegistacijskihTablica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Klima)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SistemBezKljuca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AluminijskeFelge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BoardComputer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MP3Interfejs)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gorivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mjenjac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaksimalanBrojPutnika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CijenaPoDanu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumTehnickogPregleda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojRegistacijskihTablica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klima)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SistemBezKljuca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AluminijskeFelge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SklopiviRetrovizori)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BoardComputer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MP3Interfejs)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
