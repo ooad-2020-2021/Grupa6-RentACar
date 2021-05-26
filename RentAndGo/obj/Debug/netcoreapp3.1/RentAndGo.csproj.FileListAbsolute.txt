@@ -159,11 +159,6 @@ C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug
 C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\RentAndGo.dll
 C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\RentAndGo.pdb
 C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\RentAndGo.genruntimeconfig.cache
-C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisniciSaNalogom\Create.cshtml.g.cs
-C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisniciSaNalogom\Delete.cshtml.g.cs
-C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisniciSaNalogom\Details.cshtml.g.cs
-C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisniciSaNalogom\Edit.cshtml.g.cs
-C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisniciSaNalogom\Index.cshtml.g.cs
 C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\bin\Debug\netcoreapp3.1\RentAndGo.exe
@@ -335,3 +330,13 @@ C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp
 C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Details.cshtml.g.cs
 C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Edit.cshtml.g.cs
 C:\Users\Emina Basic\Source\Repos\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Index.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Create.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Delete.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Details.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Edit.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Vozilo\Index.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisnikSaNalogom\Create.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisnikSaNalogom\Delete.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisnikSaNalogom\Details.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisnikSaNalogom\Edit.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\RentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\KorisnikSaNalogom\Index.cshtml.g.cs
