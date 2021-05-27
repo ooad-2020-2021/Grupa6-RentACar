@@ -3,10 +3,16 @@
 @{
     ViewData["Title"] = "Create";
 }
+<style>
+    .btn-primary{
+        width: 50%;
+    }
+ </style>
 
-<h1>Create</h1>
-
-<h4>KorisnikSaNalogom</h4>
+<div/>
+    <p class="text-danger" style = "text-align: center">REGISTRACIJA </p>
+    <h2 class="text= alert-heading" style="text-align: center"> Molimo unesite Vaše podatke! </h2>
+<div/>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -48,14 +54,14 @@
                 <span asp-validation-for="BrojVozackeDozvole" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Nastavi" class="btn btn-primary"/>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" style="text-align: center">Već posjedujete račun?</a>
 </div>
 
 @section Scripts {
