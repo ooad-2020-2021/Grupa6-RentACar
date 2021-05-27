@@ -30,6 +30,8 @@ namespace RentAndGo.Data
             modelBuilder.Entity<Vozac>().ToTable("Vozac");
             modelBuilder.Entity<VozackaDozvola>().ToTable("VozackaDozvola");
             modelBuilder.Entity<Vozilo>().ToTable("Vozilo");
-        }
+            modelBuilder.Entity<KorisnikSaNalogom>().ToTable("KorisnikSaNalogom");
+        } 
+
     }
 }
