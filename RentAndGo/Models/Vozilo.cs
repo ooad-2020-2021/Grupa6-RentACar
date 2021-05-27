@@ -12,35 +12,38 @@ namespace RentAndGo.Models
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
         public string Naziv { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
         public string SlikaVozila { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
         [EnumDataType(typeof(Gorivo))]
         public Gorivo Gorivo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
         [EnumDataType(typeof(Klasa))]
         public Klasa Klasa { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
         [EnumDataType(typeof(Mjenjac))]
         public Mjenjac Mjenjac { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
+        [Range(2, 20, ErrorMessage = "Vrijednost za broj sjedišta mora biti između 2 i 20.")]
         public int MaksimalanBrojPutnika { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
+        [Range(0, 200, ErrorMessage = "Vrijednost za cijenu mora biti između 0 i 200.")]
         public int CijenaPoDanu { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
         [DataType(DataType.Date)]
         public DateTime DatumTehnickogPregleda { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Obavezna vrijednost")]
+        [RegularExpression("^[AEJKMOT][0-9][0-9]-[AEJKMOT]-[0-9][0-9][0-9]$", ErrorMessage = "Neispravan format registracijskih tablica!")]
         public string BrojRegistacijskihTablica { get; set; }
 
         [Required]
