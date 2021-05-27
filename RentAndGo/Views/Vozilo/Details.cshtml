@@ -4,99 +4,208 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<style>
+    #prikaz-slika-vozila {
+        width: 100%;
+        height: auto;
+    }
+</style>
 
 <div>
-    <h4>Vozilo</h4>
+    <h5 class="text-secondary">Detalji o vozilu</h5>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Gorivo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Gorivo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Klasa)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Klasa)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Mjenjac)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Mjenjac)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaksimalanBrojPutnika)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaksimalanBrojPutnika)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CijenaPoDanu)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CijenaPoDanu)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DatumTehnickogPregleda)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DatumTehnickogPregleda)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BrojRegistacijskihTablica)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BrojRegistacijskihTablica)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Klima)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Klima)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SistemBezKljuca)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SistemBezKljuca)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AluminijskeFelge)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AluminijskeFelge)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SklopiviRetrovizori)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BoardComputer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BoardComputer)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MP3Interfejs)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MP3Interfejs)
-        </dd>
-    </dl>
+
+    <div class="container">
+
+
+
+        <div class="row">
+            <div class="col-6 col-sm-6">
+                <img id="prikaz-slika-vozila" src="@Html.DisplayFor(model => model.SlikaVozila)" class="rounded" alt="slika vozila">
+            </div>
+            <div class="col-6 col-sm-3">
+                <h5 class="text-secondary" style="align-content:center">@Html.DisplayFor(model => model.Naziv)</h5>
+
+                <i class="bi bi-droplet-half">@Html.DisplayFor(model => model.Gorivo)</i>
+                <br />
+                <i class="bi bi-gear">@Html.DisplayFor(model => model.Mjenjac)</i>
+                <br />
+                <br />
+                <h6>Dodatno:</h6>
+                @Html.DisplayFor(model => model.Klima)
+                @Html.DisplayNameFor(model => model.Klima)
+                <br />
+                @Html.DisplayFor(model => model.SistemBezKljuca)
+                @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                <br />
+                @Html.DisplayFor(model => model.AluminijskeFelge)
+                @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                <br />
+                @Html.DisplayFor(model => model.SklopiviRetrovizori)
+                @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                <br />
+                @Html.DisplayFor(model => model.BoardComputer)
+                @Html.DisplayNameFor(model => model.BoardComputer)
+                <br />
+                @Html.DisplayFor(model => model.MP3Interfejs)
+                @Html.DisplayNameFor(model => model.MP3Interfejs)
+                <br />
+            </div>
+            <div class="col-6 col-sm-3">
+                <hr />
+                <i class="bi bi-box">@Html.DisplayFor(model => model.MaksimalanBrojPutnika) Sjedišta</i>
+                <br />
+                <i class="bi bi-emoji-sunglasses">@Html.DisplayFor(model => model.Klasa)</i>
+
+            </div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            
+
+            <div class="col-6 col-sm-6" style="text-align:center">
+                <h5 class="text-secondary">Cijena po danu: @Html.DisplayFor(model => model.CijenaPoDanu) KM</h5>
+                <br />
+            </div>
+        </div>
+
+
+
+
+        <!--<div class="row">
+            <div class="col-6" align="center">
+                <img id="prikaz-slika-vozila" src="@Html.DisplayFor(model => model.SlikaVozila)" class="rounded" alt="slika vozila">
+                <label>Cijena po danu:</label>
+                <label> @Html.DisplayFor(model => model.CijenaPoDanu) KM</label>
+                <br />
+
+                <a asp-action="Uredi" asp-route-id="@Model.Id">Edit</a>
+                <i class="bi bi-pencil-square"></i>
+                <br />
+
+                <a asp-action="Index">Nazad na listu</a>
+                <i class="bi bi-backspace"></i>
+
+            </div>
+
+            <div class="col-3">
+                @Html.DisplayNameFor(model => model.Klima)
+                @Html.DisplayNameFor(model => model.SistemBezKljuca)
+
+
+                @Html.DisplayNameFor(model => model.AluminijskeFelge)
+
+
+                @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+
+
+
+                @Html.DisplayNameFor(model => model.BoardComputer)
+
+
+
+                @Html.DisplayNameFor(model => model.MP3Interfejs)
+
+
+            </div>
+            <div class="col-3">
+                @Html.DisplayFor(model => model.Klima)
+                @Html.DisplayFor(model => model.SistemBezKljuca)
+
+                @Html.DisplayFor(model => model.AluminijskeFelge)
+                @Html.DisplayFor(model => model.SklopiviRetrovizori)
+                @Html.DisplayFor(model => model.BoardComputer)
+                @Html.DisplayFor(model => model.MP3Interfejs)
+            </div>-->
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <!--<div class="w-100 d-none d-md-block"></div>-->
+        @*</div>*@
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
+                @*<dl class="row">
+                    <dd class="col-sm-8">
+                        <img id="prikaz-slika-vozila" src="@Html.DisplayFor(model => model.SlikaVozila)" class="rounded" alt="slika vozila">
+                        @Html.DisplayNameFor(model => model.CijenaPoDanu)
+                        @Html.DisplayFor(model => model.CijenaPoDanu)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Naziv)
+                    </dt>
+                    <dd class="col-sm-4">
+                        @Html.DisplayFor(model => model.Naziv)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Klasa)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Klasa)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Mjenjac)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Mjenjac)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MaksimalanBrojPutnika)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MaksimalanBrojPutnika)
+                    </dd>
+
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.DatumTehnickogPregleda)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.DatumTehnickogPregleda)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.BrojRegistacijskihTablica)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.BrojRegistacijskihTablica)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Klima)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Klima)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.SistemBezKljuca)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.AluminijskeFelge)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.SklopiviRetrovizori)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.BoardComputer)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.BoardComputer)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.MP3Interfejs)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.MP3Interfejs)
+                    </dd>
+                </dl>
+            </div>*@
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>

@@ -8,9 +8,9 @@ namespace RentAndGo.Models
 {
     public enum Mjenjac
     { 
-        [Display(Name = "MANUELNI")]
+        [Display(Name = "Manuelni")]
         MANUELNI,
-        [Display(Name = "AUTOMATIK")]
+        [Display(Name = "Automatik")]
         AUTOMATIK
     }
 }

@@ -3,96 +3,218 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<style>
 
-<h1>Edit</h1>
+    #prikaz-slika-vozila {
+        width: 100%;
+        height: auto;
+    }
+</style>
 
-<h4>Vozilo</h4>
+<h5 class="text-secondary">Uređivanje vozila</h5>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Naziv" class="control-label"></label>
-                <input asp-for="Naziv" class="form-control" />
-                <span asp-validation-for="Naziv" class="text-danger"></span>
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="form-group">
+                    <label asp-for="Naziv" class="control-label"></label>
+                    <input asp-for="Naziv" class="form-control" />
+                    <span asp-validation-for="Naziv" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Klasa" class="control-label">Klasa</label>
+                    <select asp-for="Klasa" class="form-control" asp-items="Html.GetEnumSelectList<Klasa>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Klasa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gorivo" class="control-label">Gorivo</label>
+                    <select asp-for="Gorivo" class="form-control" asp-items="Html.GetEnumSelectList<Gorivo>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Gorivo" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="SlikaVozila" class="control-label">Slika vozila</label>
+                    <input asp-for="SlikaVozila" class="form-control" />
+                    <span asp-validation-for="SlikaVozila" class="text-danger"></span>
+                    <button type="button" class="btn btn-link" onclick="prikaziSliku()">Pregled</button>
+                    <div class="text-center">
+                        <img id="prikaz-slika-vozila" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" class="rounded" alt="slika vozila">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Gorivo" class="control-label"></label>
-                <select asp-for="Gorivo" class="form-control"></select>
-                <span asp-validation-for="Gorivo" class="text-danger"></span>
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="Mjenjac" class="control-label">Mjenjač</label>
+                    <select asp-for="Mjenjac" class="form-control" asp-items="Html.GetEnumSelectList<Mjenjac>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Mjenjac" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaksimalanBrojPutnika" class="control-label">Maksimalan broj putnika</label>
+                    <input asp-for="MaksimalanBrojPutnika" class="form-control" />
+                    <span asp-validation-for="MaksimalanBrojPutnika" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CijenaPoDanu" class="control-label">Cijena po danu</label>
+                    <input asp-for="CijenaPoDanu" class="form-control" />
+                    <span asp-validation-for="CijenaPoDanu" class="text-danger"></span>
+                </div>
+                <hr />
+                <div>
+                    <label>Dodatno</label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Klima" /> @Html.DisplayNameFor(model => model.Klima)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="SistemBezKljuca" /> @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="AluminijskeFelge" /> @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="SklopiviRetrovizori" /> @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="BoardComputer" /> @Html.DisplayNameFor(model => model.BoardComputer)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="MP3Interfejs" /> @Html.DisplayNameFor(model => model.MP3Interfejs)
+                    </label>
+                </div>
+
             </div>
-            <div class="form-group">
-                <label asp-for="Klasa" class="control-label"></label>
-                <select asp-for="Klasa" class="form-control"></select>
-                <span asp-validation-for="Klasa" class="text-danger"></span>
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="DatumTehnickogPregleda" class="control-label">Datum tehničkog pregleda</label>
+                    <input asp-for="DatumTehnickogPregleda" class="form-control" />
+                    <span asp-validation-for="DatumTehnickogPregleda" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BrojRegistacijskihTablica" class="control-label">Broj registarskih tablica</label>
+                    <input asp-for="BrojRegistacijskihTablica" class="form-control" />
+                    <span asp-validation-for="BrojRegistacijskihTablica" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Mjenjac" class="control-label"></label>
-                <select asp-for="Mjenjac" class="form-control"></select>
-                <span asp-validation-for="Mjenjac" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MaksimalanBrojPutnika" class="control-label">Maksimalan broj putnika</label>
-                <input asp-for="MaksimalanBrojPutnika" class="form-control" />
-                <span asp-validation-for="MaksimalanBrojPutnika" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CijenaPoDanu" class="control-label">Cijena po danu</label>
-                <input asp-for="CijenaPoDanu" class="form-control" />
-                <span asp-validation-for="CijenaPoDanu" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumTehnickogPregleda" class="control-label">Datum tehničkog pregleda</label>
-                <input asp-for="DatumTehnickogPregleda" class="form-control" />
-                <span asp-validation-for="DatumTehnickogPregleda" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BrojRegistacijskihTablica" class="control-label">Broj registracijskih tablica</label>
-                <input asp-for="BrojRegistacijskihTablica" class="form-control" />
-                <span asp-validation-for="BrojRegistacijskihTablica" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Klima" /> @Html.DisplayNameFor(model => model.Klima)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="SistemBezKljuca" /> @Html.DisplayNameFor(model => model.SistemBezKljuca)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="AluminijskeFelge" /> @Html.DisplayNameFor(model => model.AluminijskeFelge)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="SklopiviRetrovizori" /> @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="BoardComputer" /> @Html.DisplayNameFor(model => model.BoardComputer)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="MP3Interfejs" /> @Html.DisplayNameFor(model => model.MP3Interfejs)
-                </label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+
+
+        </div>
     </div>
-</div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+
+                @*<div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="Naziv" class="control-label"></label>
+                                <input asp-for="Naziv" class="form-control" />
+                                <span asp-validation-for="Naziv" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Gorivo" class="control-label"></label>
+                                <select asp-for="Gorivo" class="form-control" asp-items="Html.GetEnumSelectList<Gorivo>()"></select>
+                                <span asp-validation-for="Gorivo" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Klasa" class="control-label"></label>
+                                <select asp-for="Klasa" class="form-control" asp-items="Html.GetEnumSelectList<Klasa>()"></select>
+                                <span asp-validation-for="Klasa" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Mjenjac" class="control-label"></label>
+                                <select asp-for="Mjenjac" class="form-control" asp-items="Html.GetEnumSelectList<Mjenjac>()"></select>
+                                <span asp-validation-for="Mjenjac" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MaksimalanBrojPutnika" class="control-label">Maksimalan broj putnika</label>
+                                <input asp-for="MaksimalanBrojPutnika" class="form-control" />
+                                <span asp-validation-for="MaksimalanBrojPutnika" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CijenaPoDanu" class="control-label">Cijena po danu</label>
+                                <input asp-for="CijenaPoDanu" class="form-control" />
+                                <span asp-validation-for="CijenaPoDanu" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DatumTehnickogPregleda" class="control-label">Datum tehničkog pregleda</label>
+                                <input asp-for="DatumTehnickogPregleda" class="form-control" />
+                                <span asp-validation-for="DatumTehnickogPregleda" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BrojRegistacijskihTablica" class="control-label">Broj registracijskih tablica</label>
+                                <input asp-for="BrojRegistacijskihTablica" class="form-control" />
+                                <span asp-validation-for="BrojRegistacijskihTablica" class="text-danger"></span>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="Klima" /> @Html.DisplayNameFor(model => model.Klima)
+                                </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="SistemBezKljuca" /> @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                                </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="AluminijskeFelge" /> @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                                </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="SklopiviRetrovizori" /> @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                                </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="BoardComputer" /> @Html.DisplayNameFor(model => model.BoardComputer)
+                                </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="MP3Interfejs" /> @Html.DisplayNameFor(model => model.MP3Interfejs)
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>*@
 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+<script>
+    function prikaziSliku() {
+        document.getElementById("prikaz-slika-vozila").src = document.getElementById("SlikaVozila").value;
+    }
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

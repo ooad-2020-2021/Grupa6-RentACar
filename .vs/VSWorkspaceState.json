@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
+    ""
+  ],
+  "SelectedNode": "\\RentAndGo",
+=======
     "",
     "\\RentAndGo"
   ],
   "SelectedNode": "\\RentAndGo\\RentAndGo.sln",
+>>>>>>> 19a981c0673eab91a507a5abb1f16dcc6a55c9b0
   "PreviewInSolutionExplorer": false
 }

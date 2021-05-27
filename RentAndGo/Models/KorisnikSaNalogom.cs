@@ -37,7 +37,8 @@ namespace RentAndGo.Models
         [MinLength(6, ErrorMessage = "Minimalno 6 karaktera!")]
         public string BrojTelefona { get; set; }
 
-        public BankovniRacun BankovniRacun { get; set; } 
+        public BankovniRacun BankovniRacun { get; set; }
+
         public string BrojVozackeDozvole { get; set; }
         public KorisnikSaNalogom() { }
 
