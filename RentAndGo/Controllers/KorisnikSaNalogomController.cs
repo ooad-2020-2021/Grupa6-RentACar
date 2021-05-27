@@ -10,11 +10,11 @@ using RentAndGo.Models;
 
 namespace RentAndGo.Controllers
 {
-    public class KorisniciSaNalogomController : Controller
+    public class KorisnikSaNalogomController : Controller
     {
         private readonly DataContext _context;
 
-        public KorisniciSaNalogomController(DataContext context)
+        public KorisnikSaNalogomController(DataContext context)
         {
             _context = context;
         }

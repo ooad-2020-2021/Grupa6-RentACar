@@ -13,11 +13,15 @@ namespace RentAndGo.Models
         public int Id { get; set; }
         [Required]
         public string Naziv { get; set; }
+
+        [Required]
+        public string SlikaVozila { get; set; }
+
         [Required]
         [EnumDataType(typeof(Gorivo))]
         public Gorivo Gorivo { get; set; }
         [Required]
-        [EnumDataType(typeof(Gorivo))]
+        [EnumDataType(typeof(Klasa))]
         public Klasa Klasa { get; set; }
         [Required]
         [EnumDataType(typeof(Mjenjac))]
@@ -32,17 +36,24 @@ namespace RentAndGo.Models
         [Required]
         public string BrojRegistacijskihTablica { get; set; }
         [Required]
+        [Display(Name = "Klima")]
         public bool Klima { get; set; }
         [Required]
+        [Display(Name = "Sistem bez ključa")]
         public bool SistemBezKljuca { get; set; }
         [Required]
+        [Display(Name = "Aluminijske felge")]
         public bool AluminijskeFelge { get; set; }
         [Required]
+        [Display(Name = "Sklopivi retrovizori")]
         public bool SklopiviRetrovizori { get; set; }
         [Required]
+        [Display(Name = "Board Computer")]
         public bool BoardComputer { get; set; }
         [Required]
+        [Display(Name = "MP3 Interfejs")]
         public bool MP3Interfejs { get; set; }
+
         public Vozilo(int id, string naziv)
         {
             id = GenerišiID();

@@ -12,21 +12,33 @@ namespace RentAndGo.Models
         [Required]
         public int ID { get; set; }
         [Required]
+        [MinLength(3, ErrorMessage = "Minimalno 3 karaktera!")]
         public string Ime { get; set; }
         [Required]
+        [MinLength(3, ErrorMessage = "Minimalno 3 karaktera!")]
+
         public string Prezime { get; set; }
         [Required]
         [DataType(DataType.Date)]
         public DateTime DatumRodjenja{ get; set; }
         [Required]
+        [MinLength(8, ErrorMessage = "Minimalno 8 karaktera!")]
         public string Lozinka { get; set; }
         [Required]
+        [RegularExpression(@"^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
+         + @"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+				    [0-9]{1,2}|25[0-5]|2[0-4][0-9])\."
+         + @"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+				    [0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+         + @"([a-zA-Z0-9]+[\w-]+\.)+[a-zA-Z]{1}[a-zA-Z0-9-]{1,23})$",
+            ErrorMessage = "Neispravan format e-mail adrese!")]
         public string Email { get; set; }
         [Required]
+        [MinLength(6, ErrorMessage = "Minimalno 6 karaktera!")]
         public string BrojTelefona { get; set; }
-        [Required]
+
         public BankovniRacun BankovniRacun { get; set; }
-        [Required]
+
         public string BrojVozackeDozvole { get; set; }
         public KorisnikSaNalogom() { }
 

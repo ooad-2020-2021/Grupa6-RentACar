@@ -1,0 +1,183 @@
+﻿@model IEnumerable<RentAndGo.Models.Vozilo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    #prikaz-slika-vozila {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<div class="row">
+    <div class="col-10">
+        <h5 class="text-secondary">Pregled svih vozila</h5>
+    </div>
+    <div class="col-2">
+        <i class="bi bi-plus-square"></i>
+        <a asp-action="Create">Dodaj novo vozilo</a>
+    </div>
+</div>
+<hr />
+
+
+@foreach (var item in Model)
+{
+    <div class="container">
+        <div class="card mb-3" style="width: 100%; height:100%">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img id="prikaz-slika-vozila" src="@Html.DisplayFor(modelItem => item.SlikaVozila)" class="rounded" alt="slika vozila">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Naziv)</h5>
+                        <br>
+                        <div class="row">
+                            <div class="col-6 col-sm-4">
+                                <i class="bi bi-box"> @Html.DisplayFor(modelItem => item.MaksimalanBrojPutnika) Sjedišta</i>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <i class="bi bi-snow3"> @Html.DisplayFor(modelItem => item.Klima) Klima</i>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <i class="bi bi-card-text">
+                                    <label class="font-italic">@Html.DisplayFor(modelItem => item.CijenaPoDanu)KM/DAN</label>
+
+                                </i>
+                            </div>
+
+
+                            <!-- Force next columns to break to new line -->
+                            <div class="w-100 d-none d-md-block"></div>
+
+                            <div class="col-6 col-sm-4">
+                                <i class="bi bi-gear"> @Html.DisplayFor(modelItem => item.Mjenjac)</i>
+                            </div>
+                            <div class="col-6 col-sm-4">
+                                <i class="bi bi-card-text"> @Html.DisplayFor(modelItem => item.BrojRegistacijskihTablica)</i>
+                            </div>
+                            <div class="w-100 d-none d-md-block"></div>
+                        </div>
+                        <br>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Dodatne informacije</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Obriši</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naziv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gorivo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Klasa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mjenjac)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaksimalanBrojPutnika)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CijenaPoDanu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DatumTehnickogPregleda)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BrojRegistacijskihTablica)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Klima)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BoardComputer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MP3Interfejs)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    <img id="prikaz-slika-vozila" src= "@Html.DisplayFor(modelItem => item.SlikaVozila)" class="rounded" alt="slika vozila">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CijenaPoDanu)
+                </td>
+                <td>
+            @Html.DisplayFor(modelItem => item.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gorivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Klasa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mjenjac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaksimalanBrojPutnika)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CijenaPoDanu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatumTehnickogPregleda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrojRegistacijskihTablica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Klima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SistemBezKljuca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AluminijskeFelge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SklopiviRetrovizori)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoardComputer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MP3Interfejs)
+        </td>
+                <td>
+            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </td>
+            </tr>
+            }
+        </tbody>
+    </table>*@

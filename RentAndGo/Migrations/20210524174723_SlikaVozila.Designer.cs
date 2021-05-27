@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RentAndGo.Data;
 
 namespace RentAndGo.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210524174723_SlikaVozila")]
+    partial class SlikaVozila
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,6 +111,7 @@ namespace RentAndGo.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("BankovniRacunBrojRacuna")
+                        .IsRequired()
                         .HasColumnType("varchar(767)");
 
                     b.Property<string>("BrojTelefona")
@@ -261,7 +264,9 @@ namespace RentAndGo.Migrations
                 {
                     b.HasOne("RentAndGo.Models.BankovniRacun", "BankovniRacun")
                         .WithMany()
-                        .HasForeignKey("BankovniRacunBrojRacuna");
+                        .HasForeignKey("BankovniRacunBrojRacuna")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
