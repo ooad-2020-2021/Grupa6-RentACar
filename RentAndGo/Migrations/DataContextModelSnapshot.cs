@@ -109,7 +109,6 @@ namespace RentAndGo.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("BankovniRacunBrojRacuna")
-                        .IsRequired()
                         .HasColumnType("varchar(767)");
 
                     b.Property<string>("BrojTelefona")
@@ -262,9 +261,7 @@ namespace RentAndGo.Migrations
                 {
                     b.HasOne("RentAndGo.Models.BankovniRacun", "BankovniRacun")
                         .WithMany()
-                        .HasForeignKey("BankovniRacunBrojRacuna")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BankovniRacunBrojRacuna");
                 });
 #pragma warning restore 612, 618
         }

@@ -24,7 +24,6 @@ namespace RentAndGo.Models
         public string Email { get; set; }
         [Required]
         public string BrojTelefona { get; set; }
-        [Required]
         public BankovniRacun BankovniRacun { get; set; }
         [Required]
         public string BrojVozackeDozvole { get; set; }

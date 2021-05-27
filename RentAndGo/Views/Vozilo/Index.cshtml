@@ -60,7 +60,9 @@
                             <div class="w-100 d-none d-md-block"></div>
                         </div>
                         <br>
-                        <a asp-action="Details" asp-route-id="@item.Id">Dodatne informacije</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Dodatne informacije</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Obriši</a>
                     </div>
                 </div>
             </div>
