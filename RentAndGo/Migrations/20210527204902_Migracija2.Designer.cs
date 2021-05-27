@@ -9,8 +9,8 @@ using RentAndGo.Data;
 namespace RentAndGo.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210525194740_Ispravka")]
-    partial class Ispravka
+    [Migration("20210527204902_Migracija2")]
+    partial class Migracija2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -118,7 +118,6 @@ namespace RentAndGo.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("BrojVozackeDozvole")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DatumRodjenja")

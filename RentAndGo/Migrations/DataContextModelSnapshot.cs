@@ -116,7 +116,6 @@ namespace RentAndGo.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("BrojVozackeDozvole")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DatumRodjenja")
