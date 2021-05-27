@@ -8,13 +8,13 @@ namespace RentAndGo.Models
 {
     public enum Klasa
     {
-        [Display(Name = "MALA")]
+        [Display(Name = "Mala")]
         MALA,
-        [Display(Name = "SREDNJA")]
+        [Display(Name = "Srednja")]
         SREDNJA,
-        [Display(Name = "VISOKA")]
+        [Display(Name = "Visoka")]
         VISOKA,
-        [Display(Name = "TRANSPORTNA")]
+        [Display(Name = "Transportna")]
         TRANASPORTNA
     }
 }

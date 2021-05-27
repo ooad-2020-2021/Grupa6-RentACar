@@ -8,11 +8,11 @@ namespace RentAndGo.Models
 {
     public enum Gorivo
     {
-        [Display(Name = "DIZEL")]
+        [Display(Name = "Dizel")]
         DIZEL,
-        [Display(Name = "BENZIN")]
+        [Display(Name = "Benzin")]
         BENZIN,
-        [Display(Name = "PLIN")]
+        [Display(Name = "Plin")]
         PLIN
     }
 }
