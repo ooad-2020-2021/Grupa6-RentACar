@@ -54,7 +54,7 @@ namespace RentAndGo.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Ime,Prezime,DatumRodjenja,Lozinka,Email,BrojTelefona,BrojVozackeDozvole")] KorisnikSaNalogom korisnikSaNalogom)
+        public async Task<IActionResult> Create([Bind("ID,Ime,Prezime,DatumRodjenja,Lozinka,Email,BrojTelefona,BrojVozackeDozvole,SlikaKorisnika")] KorisnikSaNalogom korisnikSaNalogom)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace RentAndGo.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Ime,Prezime,DatumRodjenja,Lozinka,Email,BrojTelefona,BrojVozackeDozvole")] KorisnikSaNalogom korisnikSaNalogom)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Ime,Prezime,DatumRodjenja,Lozinka,Email,BrojTelefona,BrojVozackeDozvole,SlikaKorisnika")] KorisnikSaNalogom korisnikSaNalogom)
         {
             if (id != korisnikSaNalogom.ID)
             {

@@ -108,15 +108,11 @@ namespace RentAndGo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("BankovniRacunBrojRacuna")
-                        .HasColumnType("varchar(767)");
-
                     b.Property<string>("BrojTelefona")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("BrojVozackeDozvole")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DatumRodjenja")
@@ -138,9 +134,10 @@ namespace RentAndGo.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("ID");
+                    b.Property<string>("SlikaKorisnika")
+                        .HasColumnType("text");
 
-                    b.HasIndex("BankovniRacunBrojRacuna");
+                    b.HasKey("ID");
 
                     b.ToTable("KorisnikSaNalogom");
                 });
@@ -255,13 +252,6 @@ namespace RentAndGo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vozilo");
-                });
-
-            modelBuilder.Entity("RentAndGo.Models.KorisnikSaNalogom", b =>
-                {
-                    b.HasOne("RentAndGo.Models.BankovniRacun", "BankovniRacun")
-                        .WithMany()
-                        .HasForeignKey("BankovniRacunBrojRacuna");
                 });
 #pragma warning restore 612, 618
         }

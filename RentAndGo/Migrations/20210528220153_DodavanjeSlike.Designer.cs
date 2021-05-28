@@ -9,8 +9,8 @@ using RentAndGo.Data;
 namespace RentAndGo.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210525194740_Ispravka")]
-    partial class Ispravka
+    [Migration("20210528220153_DodavanjeSlike")]
+    partial class DodavanjeSlike
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -110,15 +110,11 @@ namespace RentAndGo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("BankovniRacunBrojRacuna")
-                        .HasColumnType("varchar(767)");
-
                     b.Property<string>("BrojTelefona")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("BrojVozackeDozvole")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DatumRodjenja")
@@ -140,9 +136,10 @@ namespace RentAndGo.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("ID");
+                    b.Property<string>("SlikaKorisnika")
+                        .HasColumnType("text");
 
-                    b.HasIndex("BankovniRacunBrojRacuna");
+                    b.HasKey("ID");
 
                     b.ToTable("KorisnikSaNalogom");
                 });
@@ -257,13 +254,6 @@ namespace RentAndGo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vozilo");
-                });
-
-            modelBuilder.Entity("RentAndGo.Models.KorisnikSaNalogom", b =>
-                {
-                    b.HasOne("RentAndGo.Models.BankovniRacun", "BankovniRacun")
-                        .WithMany()
-                        .HasForeignKey("BankovniRacunBrojRacuna");
                 });
 #pragma warning restore 612, 618
         }
