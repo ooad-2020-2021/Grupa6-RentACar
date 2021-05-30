@@ -11,20 +11,25 @@ namespace RentAndGo.Models
         [Key]
         [Required]
         public int ID { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Obavezno polje!")]
         [MinLength(3, ErrorMessage = "Minimalno 3 karaktera!")]
         public string Ime { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Obavezno polje!")]
         [MinLength(3, ErrorMessage = "Minimalno 3 karaktera!")]
 
         public string Prezime { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Obavezno polje!")]
         [DataType(DataType.Date)]
+        [Display(Name = "Datum rođenja")]
         public DateTime DatumRodjenja{ get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Obavezno polje!")]
         [MinLength(8, ErrorMessage = "Minimalno 8 karaktera!")]
         public string Lozinka { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Obavezno polje!")]
+        [Display(Name = "E-mail")]
         [RegularExpression(@"^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
          + @"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
 				    [0-9]{1,2}|25[0-5]|2[0-4][0-9])\."
@@ -33,16 +38,17 @@ namespace RentAndGo.Models
          + @"([a-zA-Z0-9]+[\w-]+\.)+[a-zA-Z]{1}[a-zA-Z0-9-]{1,23})$",
             ErrorMessage = "Neispravan format e-mail adrese!")]
         public string Email { get; set; }
-        [Required]
+        
+        [Required (ErrorMessage = "Obavezno polje!")]
+        [Display(Name = "Broj telefona")]
         [MinLength(6, ErrorMessage = "Minimalno 6 karaktera!")]
         public string BrojTelefona { get; set; }
 
-        public BankovniRacun BankovniRacun { get; set; }
-
+        public string SlikaKorisnika { get; set; }
+        
+        [Display(Name = "Broj vozačke dozvole")]
         public string BrojVozackeDozvole { get; set; }
         public KorisnikSaNalogom() { }
-
-
         public KorisnikSaNalogom(int id, string ime, string prezime, DateTime datumRodenja,  string lozinka, string email, string brojTel)
         {
             id = GenerišiID();

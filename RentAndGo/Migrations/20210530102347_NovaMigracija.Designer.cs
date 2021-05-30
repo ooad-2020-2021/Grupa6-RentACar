@@ -9,8 +9,8 @@ using RentAndGo.Data;
 namespace RentAndGo.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210524174723_SlikaVozila")]
-    partial class SlikaVozila
+    [Migration("20210530102347_NovaMigracija")]
+    partial class NovaMigracija
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -110,16 +110,11 @@ namespace RentAndGo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("BankovniRacunBrojRacuna")
-                        .IsRequired()
-                        .HasColumnType("varchar(767)");
-
                     b.Property<string>("BrojTelefona")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("BrojVozackeDozvole")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DatumRodjenja")
@@ -141,9 +136,10 @@ namespace RentAndGo.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("ID");
+                    b.Property<string>("SlikaKorisnika")
+                        .HasColumnType("text");
 
-                    b.HasIndex("BankovniRacunBrojRacuna");
+                    b.HasKey("ID");
 
                     b.ToTable("KorisnikSaNalogom");
                 });
@@ -258,15 +254,6 @@ namespace RentAndGo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vozilo");
-                });
-
-            modelBuilder.Entity("RentAndGo.Models.KorisnikSaNalogom", b =>
-                {
-                    b.HasOne("RentAndGo.Models.BankovniRacun", "BankovniRacun")
-                        .WithMany()
-                        .HasForeignKey("BankovniRacunBrojRacuna")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

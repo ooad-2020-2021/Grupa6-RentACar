@@ -24,6 +24,5 @@ namespace RentAndGo.Models
         }
         public BankovniRacun() { }
 
-
     }
 }

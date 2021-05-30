@@ -4,7 +4,7 @@ using MySql.Data.EntityFrameworkCore.Metadata;
 
 namespace RentAndGo.Migrations
 {
-    public partial class MigracijaRentAndGo : Migration
+    public partial class NovaMigracija : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -60,6 +60,26 @@ namespace RentAndGo.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "KorisnikSaNalogom",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Ime = table.Column<string>(nullable: false),
+                    Prezime = table.Column<string>(nullable: false),
+                    DatumRodjenja = table.Column<DateTime>(nullable: false),
+                    Lozinka = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    BrojTelefona = table.Column<string>(nullable: false),
+                    SlikaKorisnika = table.Column<string>(nullable: true),
+                    BrojVozackeDozvole = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KorisnikSaNalogom", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Vozac",
                 columns: table => new
                 {
@@ -98,6 +118,7 @@ namespace RentAndGo.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Naziv = table.Column<string>(nullable: false),
+                    SlikaVozila = table.Column<string>(nullable: false),
                     Gorivo = table.Column<int>(nullable: false),
                     Klasa = table.Column<int>(nullable: false),
                     Mjenjac = table.Column<int>(nullable: false),
@@ -116,43 +137,15 @@ namespace RentAndGo.Migrations
                 {
                     table.PrimaryKey("PK_Vozilo", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "KorisnikSaNalogom",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Ime = table.Column<string>(nullable: false),
-                    Prezime = table.Column<string>(nullable: false),
-                    DatumRodjenja = table.Column<DateTime>(nullable: false),
-                    Lozinka = table.Column<string>(nullable: false),
-                    Email = table.Column<string>(nullable: false),
-                    BrojTelefona = table.Column<string>(nullable: false),
-                    BankovniRacunBrojRacuna = table.Column<string>(nullable: false),
-                    BrojVozackeDozvole = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_KorisnikSaNalogom", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_KorisnikSaNalogom_BankovniRacun_BankovniRacunBrojRacuna",
-                        column: x => x.BankovniRacunBrojRacuna,
-                        principalTable: "BankovniRacun",
-                        principalColumn: "BrojRacuna",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_KorisnikSaNalogom_BankovniRacunBrojRacuna",
-                table: "KorisnikSaNalogom",
-                column: "BankovniRacunBrojRacuna");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Admin");
+
+            migrationBuilder.DropTable(
+                name: "BankovniRacun");
 
             migrationBuilder.DropTable(
                 name: "Iznajmljivanje");
@@ -168,9 +161,6 @@ namespace RentAndGo.Migrations
 
             migrationBuilder.DropTable(
                 name: "Vozilo");
-
-            migrationBuilder.DropTable(
-                name: "BankovniRacun");
         }
     }
 }

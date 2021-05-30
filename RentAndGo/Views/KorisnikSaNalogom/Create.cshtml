@@ -4,12 +4,20 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>KorisnikSaNalogom</h4>
+<style>
+    .btn-primary {
+        width: 50%;
+    }
+    
+</style>
+<div />
+<p class="text-danger" style="text-align: center; font-style: italic; font-weight: bold">REGISTRACIJA </p>
+<p class ="text-center" style="color: black">Brzo i jednostavno.</p> 
+<h2 class="text= alert-heading" style="text-align: center"> Molimo unesite Vaše podatke! </h2>
+<div />
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row" style="justify-content: center">
+    <div class="col-md-12; border border-primary" style="padding: 30px; width: 50%">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -29,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Lozinka" class="control-label"></label>
-                <input asp-for="Lozinka" class="form-control" />
+                <input asp-for="Lozinka" class="form-control" TextMode="Password" />
                 <span asp-validation-for="Lozinka" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -47,15 +55,14 @@
                 <input asp-for="BrojVozackeDozvole" class="form-control" />
                 <span asp-validation-for="BrojVozackeDozvole" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group" style="text-align: center">
+                <input type="submit" value="Nastavi" class="btn btn-primary" />
+            </div>
+            <div style="text-align: center">
+                <a asp-action="Index">Već posjedujete račun?</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
