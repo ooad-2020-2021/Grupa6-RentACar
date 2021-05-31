@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Lozinka" class="control-label"></label>
-                <input asp-for="Lozinka" class="form-control" TextMode="Password" />
+                <input asp-for="Lozinka" class="form-control" type="Password" />
                 <span asp-validation-for="Lozinka" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -59,7 +59,7 @@
                 <input type="submit" value="Nastavi" class="btn btn-primary" />
             </div>
             <div style="text-align: center">
-                <a asp-action="Index">Već posjedujete račun?</a>
+                <a asp-controller="Prijava" asp-action="Create">Već posjedujete račun?</a>
             </div>
         </form>
     </div>
