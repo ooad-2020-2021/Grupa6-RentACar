@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DT User\\Source\\Repos\\ooad-2020-2021\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {}
+    "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DT User\\Source\\Repos\\ooad-2020-2021\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {
+    "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DT User\\Source\\Repos\\ooad-2020-2021\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+        "projectUniqueName": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
         "projectName": "ImplementacijaRentAndGo",
-        "projectPath": "C:\\Users\\DT User\\Source\\Repos\\ooad-2020-2021\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
-        "packagesPath": "C:\\Users\\DT User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DT User\\Source\\Repos\\ooad-2020-2021\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
+        "projectPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+        "packagesPath": "C:\\Users\\Emina Basic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DT User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emina Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,11 +54,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.1.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             },
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
@@ -83,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
