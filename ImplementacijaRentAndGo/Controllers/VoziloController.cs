@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ImplementacijaRentAndGo.Data;
 using ImplementacijaRentAndGo.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ImplementacijaRentAndGo.Controllers
 {
@@ -19,12 +20,14 @@ namespace ImplementacijaRentAndGo.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Administrator")]
         // GET: Vozilo
         public async Task<IActionResult> Index()
         {
             return View(await _context.Vozilo.ToListAsync());
         }
 
+        [Authorize(Roles = "Administrator")]
         // GET: Vozilo/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -43,6 +46,7 @@ namespace ImplementacijaRentAndGo.Controllers
             return View(vozilo);
         }
 
+        [Authorize(Roles = "Administrator")]
         // GET: Vozilo/Create
         public IActionResult Create()
         {
@@ -65,6 +69,7 @@ namespace ImplementacijaRentAndGo.Controllers
             return View(vozilo);
         }
 
+        [Authorize(Roles = "Administrator")]
         // GET: Vozilo/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -84,6 +89,7 @@ namespace ImplementacijaRentAndGo.Controllers
         // POST: Vozilo/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Naziv,SlikaVozila,Gorivo,Klasa,Mjenjac,Lokacija,MaksimalanBrojPutnika,CijenaPoDanu,DatumTehnickogPregleda,BrojRegistacijskihTablica,Klima,SistemBezKljuca,AluminijskeFelge,SklopiviRetrovizori,BoardComputer,MP3Interfejs")] Vozilo vozilo)
@@ -116,6 +122,7 @@ namespace ImplementacijaRentAndGo.Controllers
             return View(vozilo);
         }
 
+        [Authorize(Roles = "Administrator")]
         // GET: Vozilo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
