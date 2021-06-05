@@ -13,7 +13,6 @@ namespace ImplementacijaRentAndGo.Data
             : base(options)
         {
         }
-        public DbSet<Admin> Admin { get; set; }
         public DbSet<BankovniRacun> BankovniRacun { get; set; }
         public DbSet<Iznajmljivanje> Iznajmljivanje { get; set; }
         public DbSet<KorisnikSaNalogom> KorisnikSaNalogom { get; set; }
@@ -23,7 +22,6 @@ namespace ImplementacijaRentAndGo.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Admin>().ToTable("Admin");
             modelBuilder.Entity<BankovniRacun>().ToTable("BankovniRacun");
             modelBuilder.Entity<Iznajmljivanje>().ToTable("Iznajmljivanje");
             modelBuilder.Entity<Vozac>().ToTable("Vozac");
