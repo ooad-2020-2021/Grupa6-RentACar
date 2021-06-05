@@ -1,0 +1,40 @@
+﻿@model RentAndGo.Models.KorisnikSaNalogom
+
+@{
+    ViewData["Title"] = "Prijava";
+}
+
+<h1>Prijava</h1>
+
+<h4>Molim Vas unesite pristupne podatke:</h4>
+<hr />
+<div class="row" tyle="justify-content: center">
+    <div class="col-md-12; border border-primary" style="padding: 30px; width: 50%">
+        <form asp-action="Prijava">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lozinka" class="control-label"></label>
+                <input asp-for="Lozinka" class="form-control" type="Password"/>
+                <span asp-validation-for="Lozinka" class="text-danger"></span>
+                <input id="Checkbox1" type="checkbox" />
+            </div>
+          
+
+            <div class="form-group">
+                <input type="submit" value="Prijava" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

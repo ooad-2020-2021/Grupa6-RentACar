@@ -2,6 +2,31 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-3" style="font-style: italic">Dobro došli!</h1>
-</div>
+<div class="border" style="background-image: url(https://moneyinc.com/wp-content/uploads/2019/06/2019-BMW-X2-1024x683.jpg); background-repeat:no-repeat; background-size: cover; height:800px">
+    <div class="text-center">
+        <h1 class="display-2 "> Dobro došli!</h1>
+        <p1> Hvala Vam što ste odabrali RentAndGo.</p1>
+    </div>
+    <div class="filter-container">
+        <div class="filter" style="border-right: 3px solid black;">
+            <span> Grad</span>
+            <select class="form-control" id="Select1">
+                <option>
+                    Izaberite grad
+                </option>
+
+            </select>
+        </div>
+        <div class="filter" style="border-right: 3px solid black;">
+            <span> Datum preuzimanja</span>
+            <input class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumPocetka" name="Datum Početka" value="" style="width:auto">
+        </div>
+        <div class="filter">
+            <span> Datum povratka</span>
+            <input class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumPocetka" name="Datum Početka" value="" style="width:auto">
+        </div>
+        <div>
+            <button class="filter-button"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
+ </div>

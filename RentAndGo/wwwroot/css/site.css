@@ -69,3 +69,39 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.filter-container {
+    display: flex;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+    border: 3px solid black;
+    margin-top: 150px;
+}
+
+.filter {
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter span {
+    margin-bottom: 10px;
+}
+
+.filter-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 32px;
+    background-color: #1b6ec2;
+}
+
+.filter-button i {
+    color: white;
+    font-size: 34px;
+}
