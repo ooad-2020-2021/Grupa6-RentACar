@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ImplementacijaRentAndGo.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,25 @@ namespace ImplementacijaRentAndGo.Data
             : base(options)
         {
         }
+        public DbSet<Admin> Admin { get; set; }
+        public DbSet<BankovniRacun> BankovniRacun { get; set; }
+        public DbSet<Iznajmljivanje> Iznajmljivanje { get; set; }
+        public DbSet<KorisnikSaNalogom> KorisnikSaNalogom { get; set; }
+        public DbSet<Vozac> Vozac { get; set; }
+        public DbSet<VozackaDozvola> VozackaDozvola { get; set; }
+        public DbSet<Vozilo> Vozilo { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Admin>().ToTable("Admin");
+            modelBuilder.Entity<BankovniRacun>().ToTable("BankovniRacun");
+            modelBuilder.Entity<Iznajmljivanje>().ToTable("Iznajmljivanje");
+            modelBuilder.Entity<Vozac>().ToTable("Vozac");
+            modelBuilder.Entity<VozackaDozvola>().ToTable("VozackaDozvola");
+            modelBuilder.Entity<Vozilo>().ToTable("Vozilo");
+            modelBuilder.Entity<KorisnikSaNalogom>().ToTable("KorisnikSaNalogom");
+
+            base.OnModelCreating(modelBuilder);
+        } 
     }
 }
