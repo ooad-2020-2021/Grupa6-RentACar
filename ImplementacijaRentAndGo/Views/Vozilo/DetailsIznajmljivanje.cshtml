@@ -1,0 +1,82 @@
+﻿@model ImplementacijaRentAndGo.Models.Vozilo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    #prikaz-slika-vozila {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<div>
+    <h5 class="text-secondary">Detalji o vozilu</h5>
+    <hr />
+
+    <div class="container">
+
+
+
+        <div class="row">
+            <div class="col-6 col-sm-6">
+                <img id="prikaz-slika-vozila" src="@Html.DisplayFor(model => model.SlikaVozila)" class="rounded" alt="slika vozila">
+            </div>
+            <div class="col-6 col-sm-3">
+                <h5 class="text-secondary" style="align-content:center">@Html.DisplayFor(model => model.Naziv)</h5>
+
+                <i class="bi bi-droplet-half">@Html.DisplayFor(model => model.Gorivo)</i>
+                <br />
+                <i class="bi bi-gear">@Html.DisplayFor(model => model.Mjenjac)</i>
+                <br />
+                <br />
+                <h6>Dodatno:</h6>
+                @Html.DisplayFor(model => model.Klima)
+                @Html.DisplayNameFor(model => model.Klima)
+                <br />
+                @Html.DisplayFor(model => model.SistemBezKljuca)
+                @Html.DisplayNameFor(model => model.SistemBezKljuca)
+                <br />
+                @Html.DisplayFor(model => model.AluminijskeFelge)
+                @Html.DisplayNameFor(model => model.AluminijskeFelge)
+                <br />
+                @Html.DisplayFor(model => model.SklopiviRetrovizori)
+                @Html.DisplayNameFor(model => model.SklopiviRetrovizori)
+                <br />
+                @Html.DisplayFor(model => model.BoardComputer)
+                @Html.DisplayNameFor(model => model.BoardComputer)
+                <br />
+                @Html.DisplayFor(model => model.MP3Interfejs)
+                @Html.DisplayNameFor(model => model.MP3Interfejs)
+                <br />
+            </div>
+            <div class="col-6 col-sm-3">
+                <hr />
+                <i class="bi bi-box">@Html.DisplayFor(model => model.MaksimalanBrojPutnika) Sjedišta</i>
+                <br />
+                <i class="bi bi-emoji-sunglasses">@Html.DisplayFor(model => model.Klasa)</i>
+                <br />
+                <br />
+                <br />
+                <br />
+                
+            </div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+
+
+            <div class="col-6 col-sm-6" style="text-align:center">
+                <h5 class="text-secondary">Cijena po danu: @Html.DisplayFor(model => model.CijenaPoDanu) KM</h5>
+                
+                <br />
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="VozilaZaRentanje">Back to List</a>
+</div>

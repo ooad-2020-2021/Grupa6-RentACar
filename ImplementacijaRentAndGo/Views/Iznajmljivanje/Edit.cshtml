@@ -1,0 +1,89 @@
+﻿@model ImplementacijaRentAndGo.Models.Iznajmljivanje
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Iznajmljivanje</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="IDKlijenta" class="control-label"></label>
+                <input asp-for="IDKlijenta" class="form-control" />
+                <span asp-validation-for="IDKlijenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDVozila" class="control-label"></label>
+                <input asp-for="IDVozila" class="form-control" />
+                <span asp-validation-for="IDVozila" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDVozaca" class="control-label"></label>
+                <input asp-for="IDVozaca" class="form-control" />
+                <span asp-validation-for="IDVozaca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDAdmin" class="control-label"></label>
+                <input asp-for="IDAdmin" class="form-control" />
+                <span asp-validation-for="IDAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cijena" class="control-label"></label>
+                <input asp-for="Cijena" class="form-control" />
+                <span asp-validation-for="Cijena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lokacija" class="control-label"></label>
+                <input asp-for="Lokacija" class="form-control" />
+                <span asp-validation-for="Lokacija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stanje" class="control-label"></label>
+                <select asp-for="Stanje" class="form-control"></select>
+                <span asp-validation-for="Stanje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Komentar" class="control-label"></label>
+                <input asp-for="Komentar" class="form-control" />
+                <span asp-validation-for="Komentar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Popust" class="control-label"></label>
+                <input asp-for="Popust" class="form-control" />
+                <span asp-validation-for="Popust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NacinPlacanja" class="control-label"></label>
+                <input asp-for="NacinPlacanja" class="form-control" />
+                <span asp-validation-for="NacinPlacanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumPreuzmanja" class="control-label"></label>
+                <input asp-for="DatumPreuzmanja" class="form-control" />
+                <span asp-validation-for="DatumPreuzmanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumVracanja" class="control-label"></label>
+                <input asp-for="DatumVracanja" class="form-control" />
+                <span asp-validation-for="DatumVracanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

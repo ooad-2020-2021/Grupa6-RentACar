@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ImplementacijaRentAndGo.Models.Iznajmljivanje>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IDKlijenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDVozila)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDVozaca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDAdmin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cijena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lokacija)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stanje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Komentar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Popust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NacinPlacanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumPreuzmanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumVracanja)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDKlijenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDVozila)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDVozaca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDAdmin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cijena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lokacija)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stanje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Komentar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Popust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacinPlacanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumPreuzmanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumVracanja)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
