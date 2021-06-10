@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {}
+    "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {
+    "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+        "projectUniqueName": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
         "projectName": "ImplementacijaRentAndGo",
-        "projectPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+        "projectPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
         "packagesPath": "C:\\Users\\Emina Basic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emina Basic\\Source\\Repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
+        "outputPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Emina Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,11 +46,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

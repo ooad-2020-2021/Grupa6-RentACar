@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImplementacijaRentAndGo.Models
 {
-    public class KorisnikSaNalogom
+    public class KorisnikSaNalogom 
     {
         [Key]
         [Required]
@@ -48,6 +48,8 @@ namespace ImplementacijaRentAndGo.Models
         
         [Display(Name = "Broj vozačke dozvole")]
         public string BrojVozackeDozvole { get; set; }
+
+        
         public KorisnikSaNalogom() { }
         public KorisnikSaNalogom(int id, string ime, string prezime, DateTime datumRodenja,  string lozinka, string email, string brojTel)
         {
