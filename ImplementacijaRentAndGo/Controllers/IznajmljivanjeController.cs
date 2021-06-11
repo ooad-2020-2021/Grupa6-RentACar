@@ -56,10 +56,11 @@ namespace ImplementacijaRentAndGo.Controllers
                 SlikaVozila = vozilo.SlikaVozila,
                 Lokacija = vozilo.Lokacija
             };
-            
+            IznajmljivanjeVozac mymodel = new IznajmljivanjeVozac();
+            mymodel.Vozac = await _context.Vozac.ToListAsync();
 
             ViewBag.Message = rec;
-            return View();
+            return View(mymodel);
         }
 
         // POST: Iznajmljivanje/Create
