@@ -19,6 +19,8 @@ namespace ImplementacijaRentAndGo.Models
         public string BrojTelefona { get; set; }
         [Required]
         public string BrojVozackeDozvole { get; set; }
+
+        public string SlikaVozaca { get; set; }
         public Vozac() { }
     }
 }
