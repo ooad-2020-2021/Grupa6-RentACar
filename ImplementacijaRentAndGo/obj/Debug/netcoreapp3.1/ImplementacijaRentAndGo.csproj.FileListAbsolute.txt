@@ -191,3 +191,4 @@ C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\bin\De
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.Views.pdb
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csproj.CopyComplete
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.genruntimeconfig.cache
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csprojAssemblyReference.cache
