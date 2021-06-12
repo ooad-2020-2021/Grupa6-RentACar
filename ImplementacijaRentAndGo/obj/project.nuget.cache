@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JFB32MwMauMoDv8+t8SCB6CX3R9p88MKKDDQek2edHCBzm3FZ5cd+Nc/BbrH6GT9nQVsewQa2QDtXQfxpOjJog==",
+  "dgSpecHash": "Y0n9rCZtoSU92Th/WrVOUUFagqwFQpq6YOf7SuGhJJBMuNU/tEYiVPzw7eY+VXQGq2NsGVuwDxpjnK45H7scag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\azra\\Source\\Repos\\RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+  "projectFilePath": "C:\\Users\\azra\\source\\repos\\RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azra\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\azra\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",
