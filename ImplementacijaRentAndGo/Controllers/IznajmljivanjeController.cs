@@ -71,7 +71,6 @@ namespace ImplementacijaRentAndGo.Controllers
             var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
             iznajmljivanje.IDKlijenta = int.Parse(currentUserID);
             iznajmljivanje.IDVozaca = int.Parse(currentUserID);
-            //iznajmljivanje.IDKlijenta = @User.Identity.Name;
             if (ModelState.IsValid)
             {
                 _context.Add(iznajmljivanje);
