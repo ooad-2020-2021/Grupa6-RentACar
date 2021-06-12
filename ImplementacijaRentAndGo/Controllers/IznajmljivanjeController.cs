@@ -78,6 +78,11 @@ namespace ImplementacijaRentAndGo.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            //vozilo nedostupno
+            var vozilo = await _context.Vozilo.FindAsync(iznajmljivanje.IDVozila);
+            vozilo.Lokacija = Lokacija.NEDOSTUPNO;
+
+
             return View(iznajmljivanje);
         }
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\azra\\Source\\Repos\\RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {}
+    "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\azra\\Source\\Repos\\RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {
+    "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\azra\\Source\\Repos\\RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+        "projectUniqueName": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
         "projectName": "ImplementacijaRentAndGo",
-        "projectPath": "C:\\Users\\azra\\Source\\Repos\\RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
-        "packagesPath": "C:\\Users\\azra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\azra\\Source\\Repos\\RentACar\\ImplementacijaRentAndGo\\obj\\",
+        "projectPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+        "packagesPath": "C:\\Users\\Emina Basic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\azra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emina Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
