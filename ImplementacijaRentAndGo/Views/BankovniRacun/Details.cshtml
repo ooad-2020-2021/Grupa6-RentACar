@@ -1,0 +1,36 @@
+﻿@model ImplementacijaRentAndGo.Models.BankovniRacun
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bankovni račun</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumValidnostiKartice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DatumValidnostiKartice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ImePrezime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ImePrezime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JMB)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JMB)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BrojRacuna">Uredi</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

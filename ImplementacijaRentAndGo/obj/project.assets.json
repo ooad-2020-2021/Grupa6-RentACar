@@ -9666,19 +9666,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emina Basic\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
       "projectName": "ImplementacijaRentAndGo",
-      "projectPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
-      "packagesPath": "C:\\Users\\Emina Basic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emina Basic\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\ImplementacijaRentAndGo.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Grupa6-RentACar\\ImplementacijaRentAndGo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Emina Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9753,7 +9753,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
