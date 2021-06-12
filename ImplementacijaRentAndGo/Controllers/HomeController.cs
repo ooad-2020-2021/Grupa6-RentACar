@@ -1,4 +1,5 @@
 ﻿using ImplementacijaRentAndGo.Models;
+using ImplementacijaRentAndGo.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,9 +19,9 @@ namespace ImplementacijaRentAndGo.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index([Bind("Lokacija")] Lokacija lokacija1)
         {
-            return View();
+                return View();
         }
 
         public IActionResult Privacy()
