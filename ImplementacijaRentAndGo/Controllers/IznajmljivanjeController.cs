@@ -76,11 +76,21 @@ namespace ImplementacijaRentAndGo.Controllers
             {
                 _context.Add(iznajmljivanje);
                 await _context.SaveChangesAsync();
+                var vozilo = await _context.Vozilo.FindAsync(iznajmljivanje.IDVozila);
+                vozilo.Lokacija = Lokacija.NEDOSTUPNO;
+                try
+                {
+                    _context.Update(vozilo);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+
+                }
                 return RedirectToAction(nameof(Index));
             }
             //vozilo nedostupno
-            var vozilo = await _context.Vozilo.FindAsync(iznajmljivanje.IDVozila);
-            vozilo.Lokacija = Lokacija.NEDOSTUPNO;
+            
 
 
             return View(iznajmljivanje);
