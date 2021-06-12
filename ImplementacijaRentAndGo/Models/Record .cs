@@ -7,9 +7,15 @@ namespace ImplementacijaRentAndGo.Models
 {
     public class Record
     {
-        public int ID { get; set; }
-        public string ImeVozila { get; set; }
-        public string SlikaVozila { get; set; }
+        public Record(string datumPocetka, string datumKraja, Lokacija lokacija)
+        {
+            DatumPocetka = datumPocetka;
+            DatumKraja = datumKraja;
+            Lokacija = lokacija;
+        }
+
+        public string DatumPocetka { get; set; }
+        public string DatumKraja { get; set; }
         public Lokacija Lokacija { get; set; }
 
     }

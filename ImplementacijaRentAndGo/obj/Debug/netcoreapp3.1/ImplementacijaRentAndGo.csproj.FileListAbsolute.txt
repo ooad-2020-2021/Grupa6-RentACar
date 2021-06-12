@@ -191,7 +191,6 @@ C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\bin\De
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.Views.pdb
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csproj.CopyComplete
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.genruntimeconfig.cache
-C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csprojAssemblyReference.cache
 C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\bin\Debug\netcoreapp3.1\ImplementacijaRentAndGo.StaticWebAssets.xml
@@ -779,3 +778,9 @@ C:\Users\LENOVO\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\n
 C:\Users\LENOVO\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Details.cshtml.g.cs
 C:\Users\LENOVO\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Edit.cshtml.g.cs
 C:\Users\LENOVO\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Index.cshtml.g.cs
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Create.cshtml.g.cs
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Delete.cshtml.g.cs
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Details.cshtml.g.cs
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Edit.cshtml.g.cs
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Index.cshtml.g.cs
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csprojAssemblyReference.cache

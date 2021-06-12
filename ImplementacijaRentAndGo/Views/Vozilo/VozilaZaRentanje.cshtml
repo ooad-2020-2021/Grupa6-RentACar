@@ -4,6 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
+@{
+    var data = ViewBag.Message;
+}
 <style>
     #prikaz-slika-vozila {
         width: 100%;
@@ -20,53 +23,53 @@
 
 @foreach (var item in Model)
 {
-    @if (item.Lokacija != Lokacija.NEDOSTUPNO)
-    {
-    <div class="container">
-        <div class="card mb-3" style="width: 100%; height:100%">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img id="prikaz-slika-vozila" src="@Html.DisplayFor(modelItem => item.SlikaVozila)" class="rounded" alt="slika vozila">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Naziv)</h5>
-                        <br>
-                        <div class="row">
-                            <div class="col-6 col-sm-4">
-                                <i class="bi bi-box"> @Html.DisplayFor(modelItem => item.MaksimalanBrojPutnika) Sjedišta</i>
+    @*@if (item.Lokacija != Lokacija.NEDOSTUPNO && item.Lokacija == @data.Lokacija)
+    {*@
+        <div class="container">
+            <div class="card mb-3" style="width: 100%; height:100%">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img id="prikaz-slika-vozila" src="@Html.DisplayFor(modelItem => item.SlikaVozila)" class="rounded" alt="slika vozila">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Naziv)</h5>
+                            <br>
+                            <div class="row">
+                                <div class="col-6 col-sm-4">
+                                    <i class="bi bi-box"> @Html.DisplayFor(modelItem => item.MaksimalanBrojPutnika) Sjedišta</i>
+                                </div>
+                                <div class="col-6 col-sm-4">
+                                    <i class="bi bi-snow3"> @Html.DisplayFor(modelItem => item.Klima) Klima</i>
+                                </div>
+                                <div class="col-6 col-sm-4">
+                                    <i class="bi bi-card-text">
+                                        <label class="font-italic">@Html.DisplayFor(modelItem => item.CijenaPoDanu)KM/DAN</label>
+
+                                    </i>
+
+                                </div>
+
+
+                                <!-- Force next columns to break to new line -->
+                                <div class="w-100 d-none d-md-block"></div>
+
+                                <div class="col-6 col-sm-4">
+                                    <i class="bi bi-gear"> @Html.DisplayFor(modelItem => item.Mjenjac)</i>
+                                </div>
+                                <div class="col-6 col-sm-4">
+                                    <i class="bi bi-card-text"> @Html.DisplayFor(modelItem => item.BrojRegistacijskihTablica)</i>
+                                </div>
+
+                                <div class="w-100 d-none d-md-block"></div>
                             </div>
-                            <div class="col-6 col-sm-4">
-                                <i class="bi bi-snow3"> @Html.DisplayFor(modelItem => item.Klima) Klima</i>
-                            </div>
-                            <div class="col-6 col-sm-4">
-                                <i class="bi bi-card-text">
-                                    <label class="font-italic">@Html.DisplayFor(modelItem => item.CijenaPoDanu)KM/DAN</label>
-
-                                </i>
-
-                            </div>
-
-
-                            <!-- Force next columns to break to new line -->
-                            <div class="w-100 d-none d-md-block"></div>
-
-                            <div class="col-6 col-sm-4">
-                                <i class="bi bi-gear"> @Html.DisplayFor(modelItem => item.Mjenjac)</i>
-                            </div>
-                            <div class="col-6 col-sm-4">
-                                <i class="bi bi-card-text"> @Html.DisplayFor(modelItem => item.BrojRegistacijskihTablica)</i>
-                            </div>
-
-                            <div class="w-100 d-none d-md-block"></div>
+                            <br>
+                            <a asp-action="DetailsIznajmljivanje" asp-route-id="@item.Id">Dodatne informacije</a> |
+                            <a asp-action="Create" asp-route-id="@item.Id" asp-controller="Iznajmljivanje" class="btn btn-primary btn-sm" style="width:100px;">Iznajmi</a>
                         </div>
-                        <br>
-                        <a asp-action="DetailsIznajmljivanje" asp-route-id="@item.Id">Dodatne informacije</a> |
-                        <a asp-action="Create" asp-route-id="@item.Id" asp-controller="Iznajmljivanje" class="btn btn-primary btn-sm" style="width:100px;">Iznajmi</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    }
+    @*}*@
 }
