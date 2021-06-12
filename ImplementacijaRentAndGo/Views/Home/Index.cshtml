@@ -12,7 +12,7 @@
     <div class="filter-container">
         <div class="filter" style="border-right: 3px solid black;">
             <span> Lokacija</span>
-            <select  class="form-control" asp-items="Html.GetEnumSelectList<Lokacija>()">
+            <select class="form-control" asp-items="Html.GetEnumSelectList<Lokacija>()">
                 <option selected="selected" value="">Please select</option>
             </select>
         </div>
@@ -24,9 +24,12 @@
             <span> Datum povratka</span>
             <input class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumKraja" name="Datum Početka" value="" style="width:auto">
         </div>
-        <div>
-            <a asp-action="VozilaZaRentanje" asp-controller="Vozilo" class="btn btn-primary" style="height:55px; margin-right:10px; margin-top:30px">Iznajmite vozilo</a>
-        </div>
+       
+           <div>
+                <a asp-action="VozilaZaRentanje" asp-controller="Vozilo" class="btn btn-primary" style="height:55px; margin-right:10px; margin-top:30px">Iznajmite vozilo</a>
+            </div>
+        
+
     </div>
 </div>
 <div class="text-center">
