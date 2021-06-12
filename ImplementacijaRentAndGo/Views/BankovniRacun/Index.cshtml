@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ImplementacijaRentAndGo.Models.BankovniRacun>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Kreiraj novi račun</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumValidnostiKartice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImePrezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JMB)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatumValidnostiKartice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImePrezime)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BrojRacuna">Uredi</a> |
+                    <a asp-action="Details" asp-route-id="@item.BrojRacuna">Detalji</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BrojRacuna">Obriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+﻿@model ImplementacijaRentAndGo.Models.BankovniRacun
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+</style>
+<div />
+<p class="text-center" style="color: black">Brzo i jednostavno.</p>
+<h2 class="text= alert-heading" style="text-align: center"> Molimo unesite podatke o Vašem bankovnom računu! </h2>
+<div />
+<hr />
+<div class="row" style="justify-content: center">
+    <div class="col-md-12; border border-primary" style="padding: 30px; width: 50%">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BrojRacuna" class="control-label">Broj bankovnog računa:</label>
+                <input asp-for="BrojRacuna" class="form-control" />
+                <span asp-validation-for="BrojRacuna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumValidnostiKartice" class="control-label"></label>
+                <input asp-for="DatumValidnostiKartice" class="form-control" />
+                <span asp-validation-for="DatumValidnostiKartice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImePrezime" class="control-label"></label>
+                <input asp-for="ImePrezime" class="form-control" />
+                <span asp-validation-for="ImePrezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JMB" class="control-label"></label>
+                <input asp-for="JMB" class="form-control" />
+                <span asp-validation-for="JMB" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="text-align: center">
+                <input type="submit" value="Nastavi" class="btn btn-primary" />
+            </div>
+            <div style="text-align: center">
+                <a asp-action="Index">Već ste kreirali račun?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
