@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-ImplementacijaRentAndGo-91EDF1AC-9964-454E-BF79-D774F494B15A")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImplementacijaRentAndGo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]

@@ -27,10 +27,37 @@ namespace ImplementacijaRentAndGo.Controllers
             return View(await _context.Vozilo.ToListAsync());
         }
         //GET: VozilaZaRentanje
-        public async Task<IActionResult> VozilaZaRentanje()
+        public async Task<IActionResult> VozilaZaRentanje(String datumPocetka, String datumKraja, String lokacija)
         {
-            return View(await _context.Vozilo.ToListAsync());
+            //Console.Write("Uzeli smo " + datumPocetka + " " + datumKraja + " " + lokacija);
+            int broj = int.Parse(lokacija);
+            //Console.Write("OVA LOKACIJA JE " + (Lokacija)broj);
+            Record r = new Record(datumPocetka, datumKraja, (Lokacija)broj);
+            ViewBag.Message = r;
+            List<Iznajmljivanje> Iznajmljivanja = await _context.Iznajmljivanje.ToListAsync();
+            List<Vozilo> Vozila = await _context.Vozilo.ToListAsync();
+
+            for(int i =0; i < Iznajmljivanja.Count; i++)
+            {
+                for(int j = 0; j < Vozila.Count; j++)
+                {
+                    if (Iznajmljivanja[i].IDVozila == Vozila[j].Id && Iznajmljivanja[i].DatumVracanja > DateTime.Parse(datumPocetka) && Iznajmljivanja[i].Stanje != Stanje.KOMPLETIRAN)
+                    {
+                        Console.WriteLine("Iznajmljivanje " + Iznajmljivanja[i].DatumVracanja + "A odabrani pocetak je" +  DateTime.Parse(datumPocetka));
+                        Console.WriteLine("Uzmanje " + datumPocetka + " Vracanje " + datumKraja);
+                        //Console.Write("Poslani parametar je " + (Lokacija)broj + "a lokacija vozila je " + );
+                        Lokacija myStatus = (Lokacija)broj;
+                        if(Enum.TryParse(Iznajmljivanja[i].Lokacija, out myStatus))
+                            Vozila.RemoveAt(j);
+                    }
+                }
+                
+            }
+
+            return View(Vozila);
         }
+
+
         //GET: Vozilo sa id-em potencijalno za iznajmljivanje
         public async Task<IActionResult> DetailsIznajmljivanje(int? id)
         {
@@ -68,10 +95,6 @@ namespace ImplementacijaRentAndGo.Controllers
             }
 
             return View(vozilo);
-        }
-        public void Uredi(Vozilo vozilo)
-        {
-            _ = this.Edit(vozilo.Id);
         }
 
         [Authorize(Roles = "Administrator")]
