@@ -20,6 +20,8 @@
 
 @foreach (var item in Model)
 {
+    @if (item.Lokacija != Lokacija.NEDOSTUPNO)
+    {
     <div class="container">
         <div class="card mb-3" style="width: 100%; height:100%">
             <div class="row no-gutters">
@@ -66,4 +68,5 @@
             </div>
         </div>
     </div>
+    }
 }
