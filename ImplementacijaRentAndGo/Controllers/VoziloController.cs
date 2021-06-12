@@ -69,6 +69,10 @@ namespace ImplementacijaRentAndGo.Controllers
 
             return View(vozilo);
         }
+        public void Uredi(Vozilo vozilo)
+        {
+            _ = this.Edit(vozilo.Id);
+        }
 
         [Authorize(Roles = "Administrator")]
         // GET: Vozilo/Create
