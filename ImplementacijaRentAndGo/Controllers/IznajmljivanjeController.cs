@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ImplementacijaRentAndGo.Data;
 using ImplementacijaRentAndGo.Models;
+using System.Security.Claims;
 
 namespace ImplementacijaRentAndGo.Controllers
 {
     public class IznajmljivanjeController : Controller
     {
         private readonly ApplicationDbContext _context;
-
         public IznajmljivanjeController(ApplicationDbContext context)
         {
             _context = context;
@@ -49,17 +49,10 @@ namespace ImplementacijaRentAndGo.Controllers
         {
             var vozilo = await _context.Vozilo.FindAsync(id);
             Console.WriteLine("Vozilo je " + vozilo.Naziv + " " + vozilo.Lokacija);
-            Record rec = new Record
-            {
-                //ovdje cemo send datum sliku vozila i nez sta jos
-                ImeVozila = vozilo.Naziv,
-                SlikaVozila = vozilo.SlikaVozila,
-                Lokacija = vozilo.Lokacija
-            };
             IznajmljivanjeVozac mymodel = new IznajmljivanjeVozac();
             mymodel.Vozac = await _context.Vozac.ToListAsync();
 
-            ViewBag.Message = rec;
+            ViewBag.Message = vozilo;
             return View(mymodel);
         }
 
@@ -68,8 +61,17 @@ namespace ImplementacijaRentAndGo.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,IDKlijenta,IDVozila,IDVozaca,IDAdmin,Cijena,Lokacija,Stanje,Komentar,Popust,NacinPlacanja,DatumPreuzmanja,DatumVracanja")] Iznajmljivanje iznajmljivanje)
+        public async Task<IActionResult> Create([Bind("Iznajmljivanje,Vozac")] IznajmljivanjeVozac iznajmljivanjeVozac)
         {
+            //[Bind("ID,IDKlijenta,IDVozila,IDVozaca,IDAdmin,Cijena,Lokacija,Stanje,Komentar,Popust,NacinPlacanja,DatumPreuzmanja,DatumVracanja")] Iznajmljivanje iznajmljivanje
+            Iznajmljivanje iznajmljivanje = iznajmljivanjeVozac.Iznajmljivanje;
+            iznajmljivanje.Stanje = Stanje.CEKA;
+            Vozac vozac = (Vozac)iznajmljivanjeVozac.Vozac;
+            ClaimsPrincipal currentUser = this.User;
+            var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            iznajmljivanje.IDKlijenta = int.Parse(currentUserID);
+            iznajmljivanje.IDVozaca = int.Parse(currentUserID);
+            //iznajmljivanje.IDKlijenta = @User.Identity.Name;
             if (ModelState.IsValid)
             {
                 _context.Add(iznajmljivanje);
