@@ -22,7 +22,10 @@
     var data = ViewBag.Message;
 }
 <hr />
-<h3>@data.Naziv</h3>
+
+<div class="alert alert-light" role="alert">
+    @data.Naziv
+</div>
 <form asp-action="Create">
     <div class="container">
         <div class="row">
@@ -37,20 +40,17 @@
                 </div>
                 <div class="form-group ">
                     <label asp-for="Iznajmljivanje.Lokacija" class="control-label">Lokacija</label>
-                    <select asp-for="Iznajmljivanje.Lokacija" class="form-control disabled" asp-items="Html.GetEnumSelectList<Lokacija>()">
-                        <option selected="selected" value=@data.Lokacija>@data.Lokacija</option>
+                    <select class="form-control disabled" asp-items="Html.GetEnumSelectList<Lokacija>()" disabled>
+                        <option selected="selected" value=@data.Lokacija>@data.Lokacija </option>
                     </select>
                     <span asp-validation-for="Iznajmljivanje.Lokacija" class="text-danger"></span>
                 </div>
-                <div>
-                    <label asp-for="Iznajmljivanje.Cijena" class="control-label">Ukupna cijena</label>
-                    <br />
-                    <input onclick="change(@data.CijenaPoDanu)" type="button" value="Obracunaj Cijenu" id="myButton1" style="color:lightblue; border-color:transparent; width:250px;" />
+                <div class="form-group">
+                    <label asp-for="Iznajmljivanje.Cijena" class="control-label">Cijena</label>
+                    <input id="myButton1" asp-for="Iznajmljivanje.Cijena" class="form-control" />
+                    <span asp-validation-for="Iznajmljivanje.Cijena" class="text-danger"></span>
                 </div>
-                <div>
-                    <br />
-                    <input type="submit" value="Iznajmi" class="btn btn-primary" />
-                </div>
+
             </div>
             <div class="col-3">
                 <div class="form-group">
@@ -68,6 +68,8 @@
                 </div>
                 <div class="form-group">
                     <input type="hidden" asp-for="Iznajmljivanje.IDVozila" value="@data.Id" />
+                    <input type="hidden" asp-for="Iznajmljivanje.Lokacija" value="@data.Lokacija" />
+                    <input id="vozac" type="hidden" asp-for="Iznajmljivanje.IDVozaca" value="0" />
                 </div>
             </div>
         </div>
@@ -77,48 +79,75 @@
     </div>
 
 
-    @*<div id="neki" class="container my-4">
+    <hr />
+    <div class="alert alert-info" role="alert">
+        Ukoliko zelite licnog vozaca kliknite na dugme i bit ce vam dodjeljen slobodan vozac!
+    </div>
+    <div class="col-xs-4 col-sm-3 col-md-2 col-md-offset-2 everything-checkbox">
+        <div class="checkbox">
+            <label>
+                <span>Dodjeljen vozac</span>
+                <input id="ckeckbox" type="checkbox" class="checkbox style-2 ">
+            </label>
+        </div>
+    </div>
 
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+    <div id="neki" class="container my-4">
+
+        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
 
-                <div class="controls-top">
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                </div>
-
-                <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    @for (int i = 0; i < Model.Vozac.ToList().Count; i += 4)
-                    {
-                        <div asp-for="Iznajmljivanje.IDVozac" class="carousel-item  @(i == 0 ? "active" : "")">
-                            <div class="row">
-                                @foreach (var item in Model.Vozac.Skip(i).Take(4))
-                                {
-                                    <div class="col-md-3">
-                                        <div class="card mb-2">
-                                            <img id="prikaz-slikea-korisnika" src="@Html.DisplayFor(modelItem => item.SlikaVozaca)" class="rounded" alt="slika vozila">
-
-                                            <div class="card-body">
-                                                <h4 class="card-title">@Html.DisplayFor(modelItem => item.Ime) @Html.DisplayFor(modelItem => item.Prezime)</h4>
-                                                <input onclick="odabranVozac(item.Ime)" type="button" value="Izaberi" id="vozac" style="color:lightblue; border-color:transparent; width:100px;" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    }
-                </div>
+            <div class="controls-top">
+                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
             </div>
 
+            <ol class="carousel-indicators">
+                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                <li data-target="#multi-item-example" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                @for (int i = 0; i < Model.Vozac.ToList().Count; i += 4)
+                {
+                    <div asp-for="Iznajmljivanje.IDVozac" class="carousel-item  @(i == 0 ? "active" : "")">
+                        <div class="row">
+                            @foreach (var item in Model.Vozac.Skip(i).Take(4))
+                            {
+                                <div class="col-md-3">
+                                    <div class="card mb-2">
+                                        <img id="prikaz-slikea-korisnika" src="@Html.DisplayFor(modelItem => item.SlikaVozaca)" class="rounded" alt="slika vozila">
 
-        </div>*@
+                                        <div class="card-body">
+                                            <h4 class="card-title">@Html.DisplayFor(modelItem => item.Ime) @Html.DisplayFor(modelItem => item.Prezime)</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
 
+
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Hvala Vam!</h4>
+        <p>Rent and Go karakteriše kvalitet voznog parka, cijene i uslovi za najam, te ljubazni uposlenici uvijek spremni da odgovore na zahtjeve klijenata. Uslugu rezervacija vozila nudimo u nekoliko poslovnica širom BiH. Uz najam vozila je moguć i najam profesionalnih i ljubaznih vozača koji će vaš dolazak do krajnjeg cilja učiniti sigurnim i prijatnim.</p>
+        <hr>
+        <p class="mb-0">Uvijek možete otkazati 24h prije!</p>
+    </div>
+
+    <div class="row">
+        <div class="col-9">
+        </div>
+        <div class="col-3">
+            <input type="submit" value="Dodaj" class="btn btn-primary" style="width:100%;" />
+        </div>
+    </div>
 
 </form>
 
@@ -126,13 +155,28 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
 <script>
-    function change(cijena) {
+    document.getElementById("datumVracanja").addEventListener('change', function () {
             var prije = document.getElementById("datumPreuzimanja").value;
             var date1 = new Date(prije);
             var poslije = document.getElementById("datumVracanja").value;
             var date2 = new Date(poslije);
             var Difference_In_Time = date2.getTime() - date1.getTime();
-            var Difference_In_Days = (Difference_In_Time / (1000 * 3600 * 24)) * cijena;
-            document.getElementById("myButton1").value = Difference_In_Days + "KM";
-    }
+            var Difference_In_Days = (Difference_In_Time / (1000 * 3600 * 24)) * @data.CijenaPoDanu;
+            document.getElementById("myButton1").value = Difference_In_Days;
+    });
+
+    document.getElementById("ckeckbox").addEventListener('change', function () {
+        var myArray = [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80
+        ];
+        document.getElementById("vozac").value = myArray[Math.floor(Math.random() * myArray.length)];
+    });
+
 </script>

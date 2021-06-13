@@ -13,17 +13,19 @@
         <div class="filter-container">
             <div class="filter" style="border-right: 3px solid black;">
                 <span> Lokacija</span>
-                <select name="lokacija" class="form-control" asp-items="Html.GetEnumSelectList<Lokacija>()">
-                    <option selected="selected" value="">Please select</option>
+                <select name="lokacija" class="form-control" asp-items="Html.GetEnumSelectList<Lokacija>()" required>
+                    <option selected="selected" value="">Odaberite lokaciju</option>
                 </select>
+                <span class="text-danger"></span>
             </div>
             <div class="filter" style="border-right: 3px solid black;">
                 <span> Datum preuzimanja</span>
-                <input name="datumPocetka" class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumPocetka" name="Datum Početka" value="" style="width:auto">
+                <input name="datumPocetka" class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumPocetka" value="Datum Početka"  style="width:auto" required>
+                <span class="text-danger"></span>
             </div>
             <div class="filter">
                 <span> Datum povratka</span>
-                <input name="datumKraja" class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumKraja" name="Datum Početka" value="" style="width:auto">
+                <input name="datumKraja" class="form-control" type="date" data-val="true" data-val-required="Obavezno polje!" id="datumKraja" value="Datum Početka"  style="width:auto" required>
             </div>
             <div>
                 <button type="submit" class="btn btn-primary" style="height:55px; margin-right:10px; margin-top:30px">Iznajmite vozilo</button>
