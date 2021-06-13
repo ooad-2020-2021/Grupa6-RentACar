@@ -24,7 +24,14 @@ namespace ImplementacijaRentAndGo.Controllers
         // GET: Iznajmljivanje
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Iznajmljivanje.ToListAsync());
+            List<Vozilo> SvaVozila = await _context.Vozilo.ToListAsync();
+            List<Iznajmljivanje> Vrati = await _context.Iznajmljivanje.ToListAsync();
+            IznajmljivanjeVozilo iznajmljivanjeVozila = new IznajmljivanjeVozilo
+            {
+                Iznajmljivanje = Vrati,
+                Vozilo = SvaVozila
+            };
+            return View(iznajmljivanjeVozila);
         }
         public async Task<IActionResult> MojaIznajmljivanja()
         {
