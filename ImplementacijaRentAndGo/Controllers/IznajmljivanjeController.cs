@@ -54,7 +54,7 @@ namespace ImplementacijaRentAndGo.Controllers
                 Vozilo = Vozila
             };
             return View(iznajmljivanjeVozila);
-            
+
         }
 
         // GET: Iznajmljivanje/Details/5
@@ -102,7 +102,8 @@ namespace ImplementacijaRentAndGo.Controllers
             ClaimsPrincipal currentUser = this.User;
             var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
             iznajmljivanje.IDKlijenta = int.Parse(currentUserID);
-            if(iznajmljivanje.IDVozaca == 0) { 
+            if (iznajmljivanje.IDVozaca == 0)
+            {
                 iznajmljivanje.IDVozaca = int.Parse(currentUserID);
             }
             if (ModelState.IsValid)
@@ -139,7 +140,17 @@ namespace ImplementacijaRentAndGo.Controllers
             {
                 return NotFound();
             }
-            return View(iznajmljivanje);
+            List<Vozilo> Vozila = await _context.Vozilo.ToListAsync();
+            List<Iznajmljivanje> Iznajmljivanja = await _context.Iznajmljivanje.ToListAsync();
+            Vozilo vozilo = new Vozilo();
+            foreach (var v in Vozila) { if (v.Id == iznajmljivanje.IDVozila) vozilo = v; }
+            IznajmljenoVozilo iznajmljenoVozilo = new IznajmljenoVozilo
+            {
+                Iznajmljivanje = iznajmljivanje,
+                Vozilo = vozilo
+            };
+            return View(iznajmljenoVozilo);
+
         }
 
         // POST: Iznajmljivanje/Edit/5
@@ -149,6 +160,7 @@ namespace ImplementacijaRentAndGo.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,IDKlijenta,IDVozila,IDVozaca,IDAdmin,Cijena,Lokacija,Stanje,Komentar,Popust,NacinPlacanja,DatumPreuzmanja,DatumVracanja")] Iznajmljivanje iznajmljivanje)
         {
+
             if (id != iznajmljivanje.ID)
             {
                 return NotFound();
@@ -156,9 +168,18 @@ namespace ImplementacijaRentAndGo.Controllers
 
             if (ModelState.IsValid)
             {
+                _context.Update(iznajmljivanje);
+                await _context.SaveChangesAsync();
+                Vozilo vozilo1 = await _context.Vozilo.FindAsync(iznajmljivanje.IDVozila);
+                if (iznajmljivanje.Stanje == Stanje.KOMPLETIRAN)
+                {
+                    if (iznajmljivanje.Lokacija == "MOSTAR") {vozilo1.Lokacija = Lokacija.MOSTAR; }
+                    else if (iznajmljivanje.Lokacija == "SARAJEVO") { vozilo1.Lokacija = Lokacija.SARAJEVO; }
+                    else if (iznajmljivanje.Lokacija == "ZENICA") { vozilo1.Lokacija = Lokacija.ZENICA; }
+                }
                 try
                 {
-                    _context.Update(iznajmljivanje);
+                    _context.Update(vozilo1);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -174,7 +195,16 @@ namespace ImplementacijaRentAndGo.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(iznajmljivanje);
+            List<Vozilo> Vozila = await _context.Vozilo.ToListAsync();
+            List<Iznajmljivanje> Iznajmljivanja = await _context.Iznajmljivanje.ToListAsync();
+            Vozilo vozilo = new Vozilo();
+            foreach (var v in Vozila) { if (v.Id == iznajmljivanje.IDVozila) vozilo = v; }
+            IznajmljenoVozilo iznajmljenoVozilo = new IznajmljenoVozilo
+            {
+                Iznajmljivanje = iznajmljivanje,
+                Vozilo = vozilo
+            };
+            return View(iznajmljenoVozilo);
         }
 
         // GET: Iznajmljivanje/Delete/5
@@ -209,6 +239,10 @@ namespace ImplementacijaRentAndGo.Controllers
         private bool IznajmljivanjeExists(int id)
         {
             return _context.Iznajmljivanje.Any(e => e.ID == id);
+        }
+        protected void Status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

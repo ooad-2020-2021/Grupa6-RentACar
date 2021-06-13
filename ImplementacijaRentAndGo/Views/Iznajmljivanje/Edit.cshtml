@@ -1,10 +1,10 @@
-﻿@model ImplementacijaRentAndGo.Models.Iznajmljivanje
+﻿@model ImplementacijaRentAndGo.Models.IznajmljenoVozilo
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Uredi</h1>
 
 <h4>Iznajmljivanje</h4>
 <hr />
@@ -12,68 +12,70 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />
+            <input type="hidden" asp-for="Iznajmljivanje.ID" />
             <div class="form-group">
-                <label asp-for="IDKlijenta" class="control-label"></label>
-                <input asp-for="IDKlijenta" class="form-control" />
-                <span asp-validation-for="IDKlijenta" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.IDKlijenta" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.IDKlijenta" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.IDKlijenta" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IDVozila" class="control-label"></label>
-                <input asp-for="IDVozila" class="form-control" />
-                <span asp-validation-for="IDVozila" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.IDVozila" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.IDVozila" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.IDVozila" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IDVozaca" class="control-label"></label>
-                <input asp-for="IDVozaca" class="form-control" />
-                <span asp-validation-for="IDVozaca" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.IDVozaca" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.IDVozaca" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.IDVozaca" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IDAdmin" class="control-label"></label>
-                <input asp-for="IDAdmin" class="form-control" />
-                <span asp-validation-for="IDAdmin" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.IDAdmin" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.IDAdmin" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.IDAdmin" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Cijena" class="control-label"></label>
-                <input asp-for="Cijena" class="form-control" />
-                <span asp-validation-for="Cijena" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.Cijena" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.Cijena" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.Cijena" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Lokacija" class="control-label"></label>
-                <input asp-for="Lokacija" class="form-control" />
-                <span asp-validation-for="Lokacija" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.Lokacija" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.Lokacija" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.Lokacija" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Stanje" class="control-label"></label>
-                <select asp-for="Stanje" class="form-control" asp-items="Html.GetEnumSelectList<Stanje>()">  
-                <option selected="selected" value="">Please select</option>
+                <label asp-for="Iznajmljivanje.Stanje" class="control-label"></label>
+                <select asp-for="Iznajmljivanje.Stanje" id="stanje" class="form-control" onselectedindexchanged="Status_SelectedIndexChanged" runat="server" asp-items="Html.GetEnumSelectList<Stanje>()">
+                    <option selected="selected" value="">Please select</option>
                 </select>
-                <span asp-validation-for="Stanje" class="text-danger"></span>
+
+                <span asp-validation-for="Iznajmljivanje.Stanje" class="text-danger"></span>
+            </div>
+           
+                <div class="form-group">
+                    <label asp-for="Iznajmljivanje.Komentar" class="control-label"></label>
+                    <input asp-for="Iznajmljivanje.Komentar" class="form-control" />
+                    <span asp-validation-for="Iznajmljivanje.Komentar" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <label asp-for="Iznajmljivanje.Popust" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.Popust" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.Popust" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Komentar" class="control-label"></label>
-                <input asp-for="Komentar" class="form-control" />
-                <span asp-validation-for="Komentar" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.NacinPlacanja" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.NacinPlacanja" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.NacinPlacanja" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Popust" class="control-label"></label>
-                <input asp-for="Popust" class="form-control" />
-                <span asp-validation-for="Popust" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.DatumPreuzmanja" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.DatumPreuzmanja" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.DatumPreuzmanja" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NacinPlacanja" class="control-label"></label>
-                <input asp-for="NacinPlacanja" class="form-control" />
-                <span asp-validation-for="NacinPlacanja" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumPreuzmanja" class="control-label"></label>
-                <input asp-for="DatumPreuzmanja" class="form-control" />
-                <span asp-validation-for="DatumPreuzmanja" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumVracanja" class="control-label"></label>
-                <input asp-for="DatumVracanja" class="form-control" />
-                <span asp-validation-for="DatumVracanja" class="text-danger"></span>
+                <label asp-for="Iznajmljivanje.DatumVracanja" class="control-label"></label>
+                <input asp-for="Iznajmljivanje.DatumVracanja" class="form-control" />
+                <span asp-validation-for="Iznajmljivanje.DatumVracanja" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Sačuvaj" class="btn btn-primary" />
