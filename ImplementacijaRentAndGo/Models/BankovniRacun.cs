@@ -42,8 +42,8 @@ namespace ImplementacijaRentAndGo.Models
          @"[0-9]{13}$",
             ErrorMessage = "Unesite ispravan matični broj!")]
         [System.ComponentModel.DisplayName("JMB:")]
-        public int JMB { get; set; }
-        public BankovniRacun(string brojRacuna, DateTime datum, string imePrezime, int jMB)
+        public string JMB { get; set; }
+        public BankovniRacun(string brojRacuna, DateTime datum, string imePrezime, string jMB)
         {
             BrojRacuna = brojRacuna;
             DatumValidnostiKartice = datum;
