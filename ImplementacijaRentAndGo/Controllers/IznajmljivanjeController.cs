@@ -168,19 +168,28 @@ namespace ImplementacijaRentAndGo.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Update(iznajmljivanje);
-                await _context.SaveChangesAsync();
+                ClaimsPrincipal currentUser = this.User;
                 Vozilo vozilo1 = await _context.Vozilo.FindAsync(iznajmljivanje.IDVozila);
+                var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
                 if (iznajmljivanje.Stanje == Stanje.KOMPLETIRAN  || iznajmljivanje.Stanje == Stanje.OTKAZAN)
                 {
                     if (iznajmljivanje.Lokacija == "MOSTAR") { vozilo1.Lokacija = Lokacija.MOSTAR; }
                     else if (iznajmljivanje.Lokacija == "SARAJEVO") { vozilo1.Lokacija = Lokacija.SARAJEVO; }
                     else if (iznajmljivanje.Lokacija == "ZENICA") { vozilo1.Lokacija = Lokacija.ZENICA; }
+            
+                    
+                }
+                else if ( iznajmljivanje.Stanje == Stanje.ODOBREN)
+                {
+                    vozilo1.Lokacija = Lokacija.NEDOSTUPNO;
+                    iznajmljivanje.IDAdmin = int.Parse(currentUserID);
                 }
                 else
                 {
                     vozilo1.Lokacija = Lokacija.NEDOSTUPNO;
                 }
+                _context.Update(iznajmljivanje);
+                await _context.SaveChangesAsync();
                 try
                 {
                     _context.Update(vozilo1);
