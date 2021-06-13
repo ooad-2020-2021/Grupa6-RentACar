@@ -1,0 +1,6 @@
+C:\Users\DT User\source\repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\wwwroot\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csprojAssemblyReference.cache
+C:\Users\DT User\source\repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\wwwroot\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.AssemblyInfoInputs.cache
+C:\Users\DT User\source\repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\wwwroot\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.AssemblyInfo.cs
+C:\Users\DT User\source\repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\wwwroot\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csproj.CoreCompileInputs.cache
+C:\Users\DT User\source\repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\wwwroot\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DT User\source\repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\wwwroot\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.MvcApplicationPartsAssemblyInfo.cache
