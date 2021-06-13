@@ -171,11 +171,15 @@ namespace ImplementacijaRentAndGo.Controllers
                 _context.Update(iznajmljivanje);
                 await _context.SaveChangesAsync();
                 Vozilo vozilo1 = await _context.Vozilo.FindAsync(iznajmljivanje.IDVozila);
-                if (iznajmljivanje.Stanje == Stanje.KOMPLETIRAN)
+                if (iznajmljivanje.Stanje == Stanje.KOMPLETIRAN  || iznajmljivanje.Stanje == Stanje.OTKAZAN)
                 {
-                    if (iznajmljivanje.Lokacija == "MOSTAR") {vozilo1.Lokacija = Lokacija.MOSTAR; }
+                    if (iznajmljivanje.Lokacija == "MOSTAR") { vozilo1.Lokacija = Lokacija.MOSTAR; }
                     else if (iznajmljivanje.Lokacija == "SARAJEVO") { vozilo1.Lokacija = Lokacija.SARAJEVO; }
                     else if (iznajmljivanje.Lokacija == "ZENICA") { vozilo1.Lokacija = Lokacija.ZENICA; }
+                }
+                else
+                {
+                    vozilo1.Lokacija = Lokacija.NEDOSTUPNO;
                 }
                 try
                 {
