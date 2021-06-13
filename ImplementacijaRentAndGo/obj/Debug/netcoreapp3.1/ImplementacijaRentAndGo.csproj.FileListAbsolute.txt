@@ -985,4 +985,3 @@ C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcore
 C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.dll
 C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.pdb
 C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.genruntimeconfig.cache
-C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Home\ListaKorisnikaAdmin.cshtml.g.cs
