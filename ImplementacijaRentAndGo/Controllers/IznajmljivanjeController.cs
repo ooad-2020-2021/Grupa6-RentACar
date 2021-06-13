@@ -72,7 +72,9 @@ namespace ImplementacijaRentAndGo.Controllers
             ClaimsPrincipal currentUser = this.User;
             var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
             iznajmljivanje.IDKlijenta = int.Parse(currentUserID);
-            iznajmljivanje.IDVozaca = int.Parse(currentUserID);
+            if(iznajmljivanje.IDVozaca == 0) { 
+                iznajmljivanje.IDVozaca = int.Parse(currentUserID);
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(iznajmljivanje);
@@ -91,9 +93,6 @@ namespace ImplementacijaRentAndGo.Controllers
                 return RedirectToAction(nameof(Index));
             }
             //vozilo nedostupno
-            
-
-
             return View(iznajmljivanje);
         }
 
