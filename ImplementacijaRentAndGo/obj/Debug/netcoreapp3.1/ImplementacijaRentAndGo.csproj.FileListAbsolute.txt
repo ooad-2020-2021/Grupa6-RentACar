@@ -985,3 +985,9 @@ C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcore
 C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.dll
 C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.pdb
 C:\Users\azra\Source\Repos\Grupa6-Rent\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.genruntimeconfig.cache
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Create.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Delete.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Details.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Edit.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Index.cshtml.g.cs
+C:\Users\DT User\Source\Repos\ooad-2020-2021\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Iznajmljivanje\MojaIznajmljivanja.cshtml.g.cs

@@ -15,7 +15,6 @@ namespace ImplementacijaRentAndGo.Data
         }
         public DbSet<BankovniRacun> BankovniRacun { get; set; }
         public DbSet<Iznajmljivanje> Iznajmljivanje { get; set; }
-        public DbSet<KorisnikSaNalogom> KorisnikSaNalogom { get; set; }
         public DbSet<Vozac> Vozac { get; set; }
         public DbSet<VozackaDozvola> VozackaDozvola { get; set; }
         public DbSet<Vozilo> Vozilo { get; set; }
@@ -27,7 +26,7 @@ namespace ImplementacijaRentAndGo.Data
             modelBuilder.Entity<Vozac>().ToTable("Vozac");
             modelBuilder.Entity<VozackaDozvola>().ToTable("VozackaDozvola");
             modelBuilder.Entity<Vozilo>().ToTable("Vozilo");
-            modelBuilder.Entity<KorisnikSaNalogom>().ToTable("KorisnikSaNalogom");
+            
 
             base.OnModelCreating(modelBuilder);
         } 
