@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace ImplementacijaRentAndGo.Models
 {
-    public class IznajmljivanjeVozac
+    public class IznajmljivanjeVozilo
     {
-        public Iznajmljivanje Iznajmljivanje { get; set; }
-        public IEnumerable<Vozac> Vozac { get; set; }
+        public IEnumerable<Iznajmljivanje>  Iznajmljivanje { get; set; }
+        public IEnumerable<Vozilo> Vozilo { get; set; }
     }
 }

@@ -1,0 +1,45 @@
+﻿@model ImplementacijaRentAndGo.Models.IznajmljivanjeVozilo
+
+@{
+    ViewData["Title"] = "MojaIznajmljivanja";
+}
+<style>
+    #slika-vozila {
+        width: 780px;
+        height: 270px;
+    }
+</style>
+<div class="alert alert-primary" role="alert">
+    Moja iznajmljivanja
+</div>
+
+@foreach (var item in Model.Iznajmljivanje)
+{
+    <div class="container">
+        @foreach (var vozilo in Model.Vozilo)
+        {
+            @if (item.IDVozila == vozilo.Id)
+            {
+                <div class="card bg-white text-white">
+                    <img src="@Html.DisplayFor(modelItem => vozilo.SlikaVozila)"
+                         class="card-img"
+                         alt="..." style="border-color:transparent;" />
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => vozilo.Naziv)</h5>
+                        <p class="card-text">
+                            Od: @Html.DisplayFor(modelItem => item.DatumVracanja)
+                        </p>
+                        <p class="card-text">
+                            Do: @Html.DisplayFor(modelItem => item.DatumVracanja)
+                        </p>
+                        <p class="card-text">Lokacija : @Html.DisplayFor(modelItem => item.Lokacija)</p>
+                        <p class="card-text">Cijena : @Html.DisplayFor(modelItem => item.Cijena)KM</p>
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+    </div>
+
+}
+

@@ -26,6 +26,29 @@ namespace ImplementacijaRentAndGo.Controllers
         {
             return View(await _context.Iznajmljivanje.ToListAsync());
         }
+        public async Task<IActionResult> MojaIznajmljivanja()
+        {
+            ClaimsPrincipal currentUser = this.User;
+            var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            List<Iznajmljivanje> Iznajmljivanja = await _context.Iznajmljivanje.ToListAsync();
+            List<Vozilo> Vozila = await _context.Vozilo.ToListAsync();
+            List<Iznajmljivanje> Vrati = new List<Iznajmljivanje>();
+            for (int i = 0; i < Iznajmljivanja.Count; i++)
+            {
+                if (Iznajmljivanja[i].IDKlijenta == int.Parse(currentUserID))
+                {
+                    Vrati.Add(Iznajmljivanja[i]);
+                }
+            }
+            IznajmljivanjeVozilo iznajmljivanjeVozila = new IznajmljivanjeVozilo
+            {
+                Iznajmljivanje = Vrati,
+                Vozilo = Vozila
+            };
+            return View(iznajmljivanjeVozila);
+            
+        }
 
         // GET: Iznajmljivanje/Details/5
         public async Task<IActionResult> Details(int? id)

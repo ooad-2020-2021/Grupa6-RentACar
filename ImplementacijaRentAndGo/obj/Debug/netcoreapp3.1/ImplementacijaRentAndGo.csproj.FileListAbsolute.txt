@@ -784,3 +784,4 @@ C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\De
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Edit.cshtml.g.cs
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\BankovniRacun\Index.cshtml.g.cs
 C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\ImplementacijaRentAndGo.csprojAssemblyReference.cache
+C:\Users\Emina Basic\source\repos\Grupa6-RentACar\ImplementacijaRentAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Iznajmljivanje\MojaIznajmljivanja.cshtml.g.cs
