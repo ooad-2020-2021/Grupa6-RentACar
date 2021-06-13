@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ImplementacijaRentAndGo.Data;
 using ImplementacijaRentAndGo.Models;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ImplementacijaRentAndGo.Controllers
 {
@@ -19,7 +20,7 @@ namespace ImplementacijaRentAndGo.Controllers
             _context = context;
         }
 
-
+        [Authorize]
         // GET: Iznajmljivanje
         public async Task<IActionResult> Index()
         {
@@ -43,7 +44,7 @@ namespace ImplementacijaRentAndGo.Controllers
 
             return View(iznajmljivanje);
         }
-
+        [Authorize]
         // GET: Iznajmljivanje/Create
         public async Task<IActionResult> Create(int? id)
         {
@@ -59,6 +60,7 @@ namespace ImplementacijaRentAndGo.Controllers
         // POST: Iznajmljivanje/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Iznajmljivanje,Vozac")] IznajmljivanjeVozac iznajmljivanjeVozac)
