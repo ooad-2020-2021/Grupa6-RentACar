@@ -177,10 +177,6 @@ namespace ImplementacijaRentAndGo.Controllers
                     else if (iznajmljivanje.Lokacija == "SARAJEVO") { vozilo1.Lokacija = Lokacija.SARAJEVO; }
                     else if (iznajmljivanje.Lokacija == "ZENICA") { vozilo1.Lokacija = Lokacija.ZENICA; }
                 }
-                else
-                {
-                    vozilo1.Lokacija = Lokacija.NEDOSTUPNO;
-                }
                 try
                 {
                     _context.Update(vozilo1);
