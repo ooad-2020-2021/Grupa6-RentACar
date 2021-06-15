@@ -8,7 +8,7 @@
 - Emina Bašić
 ## Deployment
 - Deployment aplikacije na linku: http://dahmic-001-site1.itempurl.com/
-- -Video na linku: https://drive.google.com/file/d/11uWjXUm-ZADpq8ocWUYxrP2PeDtOONnl/view?usp=sharing
+- Video na linku: https://drive.google.com/file/d/11uWjXUm-ZADpq8ocWUYxrP2PeDtOONnl/view?usp=sharing
 ## Opis teme
 Apliakcija "RentAndGo" omogućava jednostavan i brz način pronalaženja odgovarajućeg vozila. Pregled vozila je moguć za sve aktere koje pristupe aplikaciji, što podrazumijeva pregled specifikacije vozila, pregled cijene iznajmljivanja, pretraga određenog vozila. Tek korisnici s nalogom imaju pristup i historiji iznajmljivanja vozila, mogu slati zahtjeve zakazivanja i otazivanja rezervacije. Da bi gost mogao zakazati rezervaciju potrebno je da kreira nalog. Kreiranje naloga podrazumijeva verifikaciju ličnih dokumenata(lična karta, vozačka dozvola u slučaju da korisnik sam namjerava upravljati vozilom) te verifikaciju bankovnog računa. Nakon slanja zahtjeva za rezervaciju, korisnik čeka validaciju zahtjeva koja podrazumijeva povratni e-mail. U slučaju da korisnik želi unajmiti ličnog vozača, to navodi u rezervaciji. U međuvremenu se obračuna popust za korisnika u slučaju da iznajmljuje na duži, unaprijed definisani, vremenski period te se kreira ugovor. Otkazivanje rezervcije je moguće najmanje 24h prije zakazanog termina. Najam vozila uključuje potpuno osiguranje kao i neograničenu kilometražu. Menadžer sistema je jedini akter koji ima mogućnost dodavanja novih vozila u sistem, brisanje postojećih i pregleda svih postojećih zahtjeva. 
 ## Funkcionalnosti
